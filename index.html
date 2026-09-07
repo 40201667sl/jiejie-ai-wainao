@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>每日热点 · AI外脑</title>
+<style>
+:root{--paper:#f4efe6;--ink:#2a241c;--ink-soft:#6b6156;--line:#e0d6c8;--accent:#8b3a2a;--tag-bg:#f3ebe0;--card:#faf6f0;--sidebar:#f7f2ea;--select:#fffdf9}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Iowan Old Style","Songti SC",Georgia,serif;background:#d8d0c4;color:var(--ink);min-height:100vh}
+.stage{max-width:1180px;margin:28px auto 48px;background:var(--paper);border-radius:18px;box-shadow:0 10px 30px rgba(60,40,20,.06);overflow:hidden;min-height:86vh}
+header.top{display:flex;align-items:center;justify-content:space-between;padding:18px 28px 14px;border-bottom:1px solid var(--line);background:linear-gradient(#f7f2ea,#f3ece2)}
+.brand{display:flex;align-items:center;gap:12px}
+.mark{width:34px;height:34px;border-radius:8px;background:#7a2e22;color:#f6efe6;display:grid;place-items:center;font-weight:700}
+.brand h1{font-size:18px}.brand p{font-size:10px;letter-spacing:.18em;color:var(--ink-soft);text-transform:uppercase}
+.refresh{border:1px solid #c9b8a4;background:#fffaf3;padding:6px 14px;border-radius:8px;font-size:13px}
+.shell{display:grid;grid-template-columns:220px 1fr;min-height:740px}
+aside{background:var(--sidebar);border-right:1px solid var(--line);padding:18px 0 28px}
+.aside-label{padding:0 20px 10px;font-size:12px;color:var(--ink-soft)}
+.date-item{display:flex;justify-content:space-between;padding:9px 20px;cursor:pointer;color:#5c5349;font-size:14px}
+.date-item.active{background:#f3e6d6;color:var(--accent);font-weight:700;box-shadow:inset 3px 0 0 var(--accent)}
+.date-item span{font-size:12px;color:#8a7d70}
+main{padding:18px 26px 36px}
+.filters{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+select,.search{width:100%;height:38px;border-radius:8px;border:1px solid #d7cbb8;background:var(--select);padding:0 12px;font:inherit;font-size:13px}
+.search{margin:10px 0 8px}
+.meta-line{font-size:12px;color:#8a7d70;margin-bottom:14px}
+.highlight{background:linear-gradient(180deg,#fffdf8,#f6efe4);border:1px solid #e6dac8;border-radius:12px;padding:16px 18px;margin-bottom:22px}
+.highlight .kicker{font-size:12px;color:var(--accent);margin-bottom:8px}
+.highlight p{font-size:15px;line-height:1.75}
+.day-head{font-size:13px;color:#7a6f64;margin:6px 0 14px}
+.card{background:var(--card);border-top:1px solid #eadfcf;padding:18px 4px 16px}
+.tag{font-size:12px;color:#6d4b2c;background:var(--tag-bg);border:1px solid #e4d4bf;border-radius:6px;padding:2px 8px;margin-right:6px}
+.card h2{font-size:22px;margin:6px 0 12px}
+.field{font-size:14.5px;line-height:1.8;margin-bottom:8px}
+.field b{color:var(--accent);margin-right:6px}
+.foot{margin-top:10px;font-size:12.5px;color:#7d7268}
+.foot a{color:var(--accent);text-decoration:none}
+.empty{padding:40px 8px;color:#8a7d70}
+@media(max-width:860px){.shell{grid-template-columns:1fr}aside{display:flex;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line)}}
+</style></head>
+<body>
+<div class="stage">
+<header class="top"><div class="brand"><div class="mark">杰</div><div><h1>杰杰的AI外脑</h1><p>Jiejie AI External Brain</p></div></div>
+<div class="refresh" id="stamp">每天 10:00 自动更新</div></header>
+<div class="shell"><aside id="dates"></aside>
+<main>
+<div class="filters">
+<select id="fDate"><option value="all">全部日期</option></select>
+<select id="fAuthor"><option value="all">全部作者</option></select>
+<select id="fTopic"><option value="all">全部主题</option></select>
+</div>
+<input class="search" id="q" placeholder="搜索关键词，如：算力、苹果、英伟达..." />
+<div class="meta-line" id="stats"></div>
+<section class="highlight" id="highlight"></section>
+<div class="day-head" id="dayHead"></div>
+<div id="list"></div>
+</main></div></div>
+<script src="./items.js"></script>
+<script>
+const datesEl=document.getElementById("dates"),listEl=document.getElementById("list"),statsEl=document.getElementById("stats"),highlightEl=document.getElementById("highlight"),dayHeadEl=document.getElementById("dayHead"),fDate=document.getElementById("fDate"),fAuthor=document.getElementById("fAuthor"),fTopic=document.getElementById("fTopic"),q=document.getElementById("q");
+const ITEMS=window.DIGEST.items||[];
+const HIGHLIGHTS=window.DIGEST.highlights||{};
+const UPDATED=window.DIGEST.updated||"";
+if(UPDATED) document.getElementById("stamp").textContent="每天 10:00 自动更新 · "+UPDATED;
+const dates=[...new Set(ITEMS.map(i=>i.date))].sort().reverse();
+const authors=[...new Set(ITEMS.map(i=>i.author))];
+const topics=[...new Set(ITEMS.map(i=>i.topic))];
+let activeDate="今日看点";
+const latest=dates[0]||"";
+function countByDate(d){return ITEMS.filter(i=>i.date===d).length}
+function renderSidebar(){
+  const todayCount=ITEMS.filter(i=>i.date===latest).length;
+  let html=`<div class="aside-label">每日热点 · 日期</div>`;
+  html+=`<div class="date-item ${activeDate==="今日看点"?"active":""}" data-d="今日看点">今日看点<span>${todayCount} 条</span></div>`;
+  dates.forEach(d=>{html+=`<div class="date-item ${activeDate===d?"active":""}" data-d="${d}">${d}<span>${countByDate(d)} 条</span></div>`});
+  datesEl.innerHTML=html;
+  datesEl.querySelectorAll(".date-item").forEach(el=>{el.onclick=()=>{activeDate=el.dataset.d;fDate.value=el.dataset.d==="今日看点"?"all":el.dataset.d;render()}});
+}
+function fillSelects(){
+  dates.forEach(d=>fDate.insertAdjacentHTML("beforeend",`<option value="${d}">${d}</option>`));
+  authors.forEach(a=>fAuthor.insertAdjacentHTML("beforeend",`<option value="${a}">${a}</option>`));
+  topics.forEach(t=>fTopic.insertAdjacentHTML("beforeend",`<option value="${t}">${t}</option>`));
+}
+function filtered(){
+  return ITEMS.filter(i=>{
+    if(activeDate!=="今日看点"&&i.date!==activeDate)return false;
+    if(activeDate==="今日看点"&&fDate.value==="all"&&latest&&i.date!==latest)return false;
+    if(fDate.value!=="all"&&i.date!==fDate.value)return false;
+    if(fAuthor.value!=="all"&&i.author!==fAuthor.value)return false;
+    if(fTopic.value!=="all"&&i.topic!==fTopic.value)return false;
+    const s=q.value.trim();
+    if(s){const bag=[i.title,i.what,i.why,i.impact,i.author,i.handle,i.topic].join(" ");if(!bag.includes(s))return false}
+    return true;
+  });
+}
+function render(){
+  renderSidebar();
+  const rows=filtered();
+  statsEl.textContent=`共 ${dates.length} 期日报 · 当前显示 ${rows.length} 条`;
+  const key=activeDate==="今日看点"?latest:activeDate;
+  highlightEl.innerHTML=`<div class="kicker">今日看点 · ${key||""}</div><p>${HIGHLIGHTS[key]||"今日暂无更多看点。"}</p>`;
+  dayHeadEl.textContent=`日期 ${activeDate==="今日看点"?(latest+" / 最新一期"):activeDate} · ${rows.length} 条`;
+  if(!rows.length){listEl.innerHTML=`<div class="empty">这一天没有符合筛选的条目。</div>`;return}
+  listEl.innerHTML=rows.map(i=>`<article class="card"><div>${i.topic.split(" & ").map(t=>`<span class="tag">${t}</span>`).join("")}</div><h2>${i.title}</h2><div class="field"><b>发生了什么</b>${i.what}</div><div class="field"><b>为什么值得关注</b>${i.why}</div><div class="field"><b>可能有什么影响</b>${i.impact}</div><div class="foot">${i.author} @${i.handle} · ${i.time} · <a href="${i.url}" target="_blank" rel="noopener">原帖</a></div></article>`).join("");
+}
+fDate.onchange=()=>{activeDate=fDate.value==="all"?"今日看点":fDate.value;render()};
+fAuthor.onchange=render;fTopic.onchange=render;q.oninput=render;
+fillSelects();render();
+</script></body></html>
