@@ -1,12 +1,18 @@
 window.DIGEST = {
-  updated: "2026-09-07",
+  updated: "2026-09-08",
   highlights: {
+    "2026-09-08": "今日核心看点：公开基准可信度危机与硬件软件双线加速。SemiAnalysis 指出 Gemini 3.8 Flash 与 Muse Spark 在新旧 Terminal Bench 上落差巨大，疑似针对性刷榜，呼吁更多私有基准；同时 AMD 软件优化 19 天让 MI355X 上 vLLM 提速 11 倍，Google TPU 推理外部化全面推进并开放基准。Anthropic 据称已连续两季实现盈利。",
     "2026-09-07": "今天能压成一条看点的是：实验室开始把「内部有多依赖 Agent」说出来。OpenAI 披露研究加速数据，Simon 盯上 7 月 token 陡升；Dylan 观察到 AI 公司员工的使用强度已经赶上分析机构。算力侧 SemiAnalysis 还在用 F-35 单价给 HBM 做换算。",
     "2026-09-06": "产业讨论从评测榜转到默认工具栈：Ben 降级 Claude 全改 Astra，Raschka 把 KV cache 和显存账算清楚。",
     "2026-09-02": "Demis 把 Gemini 3.8 Flash 和 Cyber 变体一起推出来，Flash 线继续按周迭代。",
     "2026-08-18": "Stratechery 曝出 Stripe 收购 OpenRouter。AI 的仗从「比模型」打到「比入口」。"
   },
   items: [
+    {"date":"2026-09-08","author":"SemiAnalysis","handle":"SemiAnalysis_","topic":"模型能力 & 研究","title":"Gemini 3.8 Flash 与 Muse Spark 被指明显刷榜","what":"SemiAnalysis 指出这两款模型在 Terminal Bench 2.1 上表现接近 GPT-6 和 Fable 5.1，但在更新的 4.0 上明显更差；公开任务易被 RL 环境数据模仿，导致榜单信号失真。","why":"公开基准容易被针对性优化，真实泛化能力被掩盖。","impact":"推动行业转向高质量私有基准，评估不再只看公开榜。","time":"2026-09-08 08:00 +08","url":"https://x.com/SemiAnalysis_/status/2097112791471522292"},
+    {"date":"2026-09-07","author":"Simon Willison","handle":"simonw","topic":"大公司 & 商业模式","title":"Anthropic 声称 Q2 和 Q3 均已实现盈利","what":"Simon 指出 Anthropic 声称第二季与第三季都盈利，并链接相关报道（Q2 营收约 115 亿美元量级）。","why":"少有 frontier 实验室公开连续盈利状态。","impact":"改变市场对 AI 大厂长期烧钱的叙事，可能影响融资与竞争格局。","time":"2026-09-08 06:53 +08","url":"https://x.com/simonw/status/2097096048363888960"},
+    {"date":"2026-09-07","author":"SemiAnalysis","handle":"SemiAnalysis_","topic":"芯片 & 基础设施","title":"TPU 推理外部化全面加速，InferenceX 上线","what":"SemiAnalysis 发布报告：Google TPU 推理栈快速外部化，InferenceX 提供开放基准，性能/$ 优于 B200/B300，客户增长，Ironwood/TPUv8i 推进，削弱 CUDA 护城河。","why":"首次开放 TPU 基准，显示 Google 在推理侧加速商业化。","impact":"算力选择更多元，CUDA 垄断被进一步挑战。","time":"2026-09-08 04:09 +08","url":"https://x.com/SemiAnalysis_/status/2097054644258103448"},
+    {"date":"2026-09-07","author":"SemiAnalysis","handle":"SemiAnalysis_","topic":"算力 & 硬件","title":"AMD MI355X 上 vLLM 性能 19 天提升 11 倍","what":"通过软件优化（主要长上下文 attention 等），AMD 在 MI355X 上对 MiniMax M3 的 agentic workload 性能提升 11x，全程软件。","why":"ROCm 栈的优势：硬件买一次，软件持续免费升级。","impact":"软件优化可显著缩小与 NVIDIA 差距，降低对 CUDA 依赖。","time":"2026-09-08 01:01 +08","url":"https://x.com/SemiAnalysis_/status/2097007346421531008"},
+    {"date":"2026-09-07","author":"Simon Willison","handle":"simonw","topic":"AI应用 & 工具","title":"最新模型已会主动做红绿 TDD","what":"Simon 分享：之前教 coding agents 做 red/green TDD，现在最新模型无需提示就会自动执行。","why":"展示 agentic engineering 模式的自然进化。","impact":"编码 Agent 更可靠，减少人工干预与错误。","time":"2026-09-07 22:42 +08","url":"https://x.com/simonw/status/2096972379042017533"},
     {"date":"2026-09-07","author":"Ian Cutress","handle":"IanCutress","topic":"芯片 & 基础设施","title":"商业专线正在替代消费级备用网络","what":"Ian 提到所在地没有消费级备选运营商，但商业用途有直连不共享线路可选。","why":"推理和数据回传变成刚需后，网络会从消费宽带切到可承诺带宽的专线。","impact":"跑本地集群和远程实验的人，最后一公里会变成隐性成本。","time":"2026-09-07 17:27 +08","url":"https://x.com/IanCutress/status/2096893175491182888"},
     {"date":"2026-09-06","author":"Simon Willison","handle":"simonw","topic":"模型能力 & 研究","title":"OpenAI 公开模型加速研究数据，编码 Agent 用量陡升","what":"Simon 引用 OpenAI 研究员披露：公司开始公开模型如何加速内部研究，并点出 7 月中旬 token 消耗突然拉升。","why":"少有一线实验室把递归自我改进落到内部工具用量上。","impact":"公众讨论会从跑分转到「实验室飞轮转得有多快」。","time":"2026-09-07 01:10 +08","url":"https://x.com/simonw/status/2096647325049626918"},
     {"date":"2026-09-06","author":"SemiAnalysis","handle":"SemiAnalysis_","topic":"算力 & 硬件","title":"一张 F-35 能换多少 Rubin Ultra HBM","what":"SemiAnalysis 用 F-35 造价对比旧款 1024GB HBM 和新款 192GB HBM。","why":"HBM 已经贵到要用国家项目单位来理解。","impact":"内存规格从 1024GB 收到 192GB，说明系统级权衡在改。","time":"2026-09-07 05:01 +08","url":"https://x.com/SemiAnalysis_/status/2096705256545550623"},
