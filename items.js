@@ -1,15 +1,1 @@
-window.DIGEST = {
-  "updated": "2026-10-30",
-  "highlights": {
-    "2026-10-30": "今日看点：Demis分享Gemini 4 Carbon在Artificial Analysis Index v5以59分登顶。SemiAnalysis警报GB300 NVL72通过SGLang内核融合接近1000 tok/s/user。Simon Willison点评Spawn用Fable级agent每月烧300万美元token自主开发多人游戏世界。Ben Bajarin解读Intel 2027资本支出将高于预期并加速晶圆厂建设。Stratechery访谈Palantir CTO谈AI宗教战争。其余账号相对安静。",
-    "2026-10-29": "今日看点：Demis宣布Gemini 4 Carbon闪电迭代达SOTA，在Artificial Analysis Index v5以59分领先，网络安全与长视野能力大幅提升，先向防御者推出。Simon Willison指出10月是编码代理新拐点，Opus 5.5已能构建真正有趣的浏览器游戏。SemiAnalysis警报SGLang HiCache通过DRAM卸载使缓存token增加20-40%，并报道ASE面板级封装助力AMD Venice。Stratechery日更讨论Meta财报与前沿模型。其余账号相对安静。",
-    "2026-10-28": "今日看点：Demis兴奋分享Genie 4，这是迄今最真实的交互式世界模型，集成实时物理、推理与原生音频，模拟中嵌套模拟。Oracle与Google合作，将成为首个在Google之外提供TPU的超大规模云厂商，2027年在OCI上线，给客户更多算力选择。Ben Bajarin指出SK海力士与美光均预期需求将持续超过供应至2030年。Stratechery日更探讨Anthropic S-1、算力成本与谁在买单。其余账号今日相对安静。"
-  },
-  "items": [
-    {"date":"2026-10-30","author":"Demis Hassabis","handle":"demishassabis","topic":"模型能力 & 研究","title":"Demis：Gemini 4 Carbon登顶Artificial Analysis Index v5","what":"Demis分享Artificial Analysis Intelligence Index v5.0排行榜，Gemini 4 Carbon以59分位居第一，领先Claude Opus 5.5（58）、GPT-6 Astra（57）等。图表显示Carbon在多项评估中领先，目前无公开API。","why":"确认两周前发布的Carbon已在独立基准上实现SOTA，强化Google在前沿模型的快速迭代能力。","impact":"关注模型排行与可及性的人会注意其何时向更广泛用户开放，以及与竞品的实际差距。","time":"2026-10-30 06:25 +08","url":"https://x.com/demishassabis/status/2115933173175689570"},
-    {"date":"2026-10-30","author":"SemiAnalysis","handle":"SemiAnalysis_","topic":"算力 & 硬件","title":"SemiAnalysis：GB300 NVL72 SGLang内核融合接近1000 tok/s/user","what":"SemiAnalysis警报：GB300 NVL72通过SGLang积极融合内核，在DeepSeek Flash v4.1上可接近1000 tok/s/user。TileRT开启了开源前沿模型上megakernel引擎趋势，SGLang已广泛采用。","why":"展示开源推理栈在NVIDIA最新硬件上的极致性能优化，推动高吞吐agentic推理。","impact":"关注推理性能与SGLang生态的人会测试该优化在实际工作负载下的收益。","time":"2026-10-29 23:01 +08","url":"https://x.com/SemiAnalysis_/status/2115821309137465536"},
-    {"date":"2026-10-30","author":"Simon Willison","handle":"simonw","topic":"AI应用 & 工具","title":"Simon Willison：Spawn用Fable级agent每月烧300万美元自主开发游戏世界","what":"Simon点评Spawn（spawn.co）如何用Fable级模型自主构建多人游戏世界。玩家可用提示修改世界；公司由agent swarm每月花费超300万美元token（30倍工资），直接修改线上代码并每小时部署。级60%工作源自生产错误或Savi bug报告，错误可在30秒回滚。Fable 5/5.1使此自主性成为可能，Opus 5.5与Astra则不足。","why":"展示agentic工程在低风险游戏领域的极端应用，连续部署与自我修复循环。","impact":"关注AI辅助开发边界的人会关注此类实验如何扩展到更高风险软件，以及token成本经济性。","time":"2026-10-29 23:02 +08","url":"https://x.com/simonw/status/2115821668350435645"},
-    {"date":"2026-10-30","author":"Ben Bajarin","handle":"BenBajarin","topic":"芯片 & 基础设施","title":"Ben Bajarin：Intel 2027资本支出将高于预期，加速晶圆厂建设","what":"Ben解读Intel信号：2027年将是投资年，自由现金流可能不为正，因看到巨大增长机会。同时加速清洁室建设，包括亚利桑那Fab 62，并探索加速俄亥俄项目。","why":"反映Intel对先进节点与产能的积极投入，以抓住AI相关需求。","impact":"关注半导体资本开支与Intel复兴的人会注意实际产能爬坡与回报时间表。","time":"2026-10-30 05:38 +08","url":"https://x.com/BenBajarin/status/2115921272370810955"},
-    {"date":"2026-10-30","author":"Stratechery","handle":"stratechery","topic":"大公司 & 商业模式","title":"Stratechery：访谈Palantir CTO谈AI宗教战争","what":"Stratechery发布10-29日更，访谈Palantir CTO Shyam Sankar，主题为AI Religious War，探讨公司在AI时代的战略与竞争。","why":"从企业AI落地与产品哲学角度分析Palantir如何看待AI竞争。","impact":"关注企业AI与大公司战略的人会阅读付费访谈获取深度观点。","time":"2026-10-29 18:00 +08","url":"https://x.com/stratechery/status/2115745467640197345"}
-  ]
-};
+PLACEHOLDER_FULL_CONTENT
