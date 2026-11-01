@@ -1,9 +1,34 @@
 window.DIGEST = {
-  updated: "2026-10-31",
+  updated: "2026-11-01",
   highlights: {
+    "2026-11-01": "今日焦点集中在算力硬件与软件优化：SemiAnalysis报道AMD MI355X通过软件调优与更大HBM容量，在Kimi K3代理推理上实现比B200高达2倍的性能每美元；同时社区为Hopper编写融合内核，将解码速度提升最高38%。大公司与模型研究方面相对平静。",
     "2026-10-31": "今日主要关注芯片与基础设施领域：SemiAnalysis报道混合键合技术在先进封装中的进展，以及AI网络模型对集群部署的分析；Canon因中国份额损失削减步进机计划，反映国产化进展。Ben Bajarin强调DPU在AI控制平面安全中的重要性。大公司方面，Stratechery周刊讨论Anthropic数字与互联网变化。"
   },
   items: [
+    {
+      date: "2026-10-31",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "算力 & 硬件",
+      title: "AMD MI355X在Kimi K3代理推理上实现2倍性能每美元优势",
+      what: "AMD团队通过调优AITER内核与MonoKernel解码，结合MI355X每服务器2304GB HBM，在Kimi K3 Agentic Inference上实现比B200高达2倍的性能每美元，避免跨服务器网络瓶颈。",
+      why: "更大显存容量使单服务器即可承载大模型推理，软件优化进一步提升效率，显著降低TCO。",
+      impact: "AMD在推理市场竞争力提升，可能缓解NVIDIA价格压力，带动更广泛硬件选择。",
+      time: "2026-11-01 03:03",
+      url: "https://x.com/SemiAnalysis_/status/2116606900271788210"
+    },
+    {
+      date: "2026-10-31",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "算力 & 硬件",
+      title: "社区为Hopper开发融合内核，解码速度提升达38%",
+      what: "由于NVIDIA主要优化Blackwell Ultra与Rubin的解码软件，社区开发者使用agent swarm编写约1万行融合Hopper内核，将解码速度提升最高38%。",
+      why: "旧一代GPU用户仍可通过开源软件优化获得显著性能提升，延长硬件生命周期。",
+      impact: "降低对最新一代GPU的依赖，提升整体推理算力可用性与性价比。",
+      time: "2026-11-01 07:00",
+      url: "https://x.com/SemiAnalysis_/status/2116666571728863431"
+    },
     {
       date: "2026-10-30",
       author: "SemiAnalysis",
