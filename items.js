@@ -1,10 +1,35 @@
 window.DIGEST = {
-  updated: "2026-11-01",
+  updated: "2026-11-02",
   highlights: {
+    "2026-11-02": "今日焦点集中在AI应用与模型能力评估：Andrej Karpathy用Claude Opus 5.5在约2小时内构建HackerTube，从20年HN评论中筛选6454个高质量视频推荐，提供无登录个性化推荐与数据导出；SemiAnalysis发布GDPx基准，测试前沿模型在高ROI领域的代理能力，最佳模型仅得12%，并强调安全分类器对评分的影响。其他监控账号相对安静。",
     "2026-11-01": "今日焦点集中在算力硬件与软件优化：SemiAnalysis报道AMD MI355X通过软件调优与更大HBM容量，在Kimi K3代理推理上实现比B200高达2倍的性能每美元；同时社区为Hopper编写融合内核，将解码速度提升最高38%。大公司与模型研究方面相对平静。",
     "2026-10-31": "今日主要关注芯片与基础设施领域：SemiAnalysis报道混合键合技术在先进封装中的进展，以及AI网络模型对集群部署的分析；Canon因中国份额损失削减步进机计划，反映国产化进展。Ben Bajarin强调DPU在AI控制平面安全中的重要性。大公司方面，Stratechery周刊讨论Anthropic数字与互联网变化。"
   },
   items: [
+    {
+      date: "2026-11-02",
+      author: "Andrej Karpathy",
+      handle: "@karpathy",
+      topic: "AI应用 & 工具",
+      title: "Karpathy用Claude Opus 5.5在约2小时内构建HackerTube",
+      what: "因YouTube推荐低质，Karpathy让Claude过滤近20年HN评论中的43M条评论，筛选6454个被重复推荐的视频，构建无登录的YouTube风格站点hackertube.org。使用中间帧作为缩略图，本地会话保存状态，并提供数据导出供自定义。",
+      why: "展示当前强大模型可快速处理大规模数据并生成完整应用，将以往需数周/月的项目压缩到小时级。",
+      impact: "鼓励更多个性化信息消费工具的出现，降低对平台算法的依赖，推动AI辅助开发普及。",
+      time: "2026-11-02 02:14",
+      url: "https://x.com/karpathy/status/2116957135661945283"
+    },
+    {
+      date: "2026-11-02",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "模型能力 & 研究",
+      title: "SemiAnalysis发布GDPx：测量前沿模型高价值领域代理能力",
+      what: "发布GDPx基准与专用网站gdpx.semianalysis.com，覆盖芯片设计、网络安全、生物、量化交易等高ROI领域的代理任务。最佳模型仅得12%，并指出安全分类器会使部分模型在整体评分中“保守”。",
+      why: "AI收入首先集中于能高ROI部署前沿智能的领域，而非广泛扩散，需要更针对性的基准跟踪进展。",
+      impact: "为模型评估与选择提供更精准参考，突出安全机制对实际能力表现的影响，引导产业重点领域投入。",
+      time: "2026-11-02 10:06",
+      url: "https://x.com/SemiAnalysis_/status/2117075900575477855"
+    },
     {
       date: "2026-10-31",
       author: "SemiAnalysis",
@@ -35,7 +60,7 @@ window.DIGEST = {
       handle: "@SemiAnalysis_",
       topic: "芯片 & 基础设施",
       title: "混合键合技术加速3D集成与先进封装",
-      what: "在Semicon West上，EV Group展示了die-to-wafer混合键合的两种主要方法：直接放置和集体die-to-wafer。直接放置简单但overlay受限于键合头约1µm，集体方式将最终键合移至W2W工具以提高吞吐量。",
+      what: "在Semicon West上，EV Group展示die-to-wafer混合键合的两种主要方法：直接放置和集体die-to-wafer。直接放置简单但overlay受限于键合头约1µm，集体方式将最终键合移至W2W工具以提高吞吐量。",
       why: "混合键合是实现更高密度3D集成和先进封装的关键技术，对AI芯片性能提升至关重要。",
       impact: "有望加速AI芯片的封装密度提升，降低成本并提高互连效率。",
       time: "2026-10-30 23:08",
