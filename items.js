@@ -1,11 +1,72 @@
 window.DIGEST = {
-  updated: "2026-11-02",
+  updated: "2026-11-03",
   highlights: {
+    "2026-11-03": "今日焦点集中在算力硬件与AI应用工具：SemiAnalysis报道内存厂商运营利润率达约80%，短缺预计持续至2030，并分析DeepSeek模型托管经济性；Karpathy推荐用Claude Code快速构建YouTube缩略图扩展；Simon Willison指出人口普查局因行政令将AI改为“超级智能”影响调查趋势。大公司方面Stratechery讨论Google财报与Agent策略。",
     "2026-11-02": "今日焦点集中在AI应用与模型能力评估：Andrej Karpathy用Claude Opus 5.5在约2小时内构建HackerTube，从20年HN评论中筛选6454个高质量视频推荐，提供无登录个性化推荐与数据导出；SemiAnalysis发布GDPx基准，测试前沿模型在高ROI领域的代理能力，最佳模型仅得12%，并强调安全分类器对评分的影响。其他监控账号相对安静。",
     "2026-11-01": "今日焦点集中在算力硬件与软件优化：SemiAnalysis报道AMD MI355X通过软件调优与更大HBM容量，在Kimi K3代理推理上实现比B200高达2倍的性能每美元；同时社区为Hopper编写融合内核，将解码速度提升最高38%。大公司与模型研究方面相对平静。",
     "2026-10-31": "今日主要关注芯片与基础设施领域：SemiAnalysis报道混合键合技术在先进封装中的进展，以及AI网络模型对集群部署的分析；Canon因中国份额损失削减步进机计划，反映国产化进展。Ben Bajarin强调DPU在AI控制平面安全中的重要性。大公司方面，Stratechery周刊讨论Anthropic数字与互联网变化。"
   },
   items: [
+    {
+      date: "2026-11-03",
+      author: "Andrej Karpathy",
+      handle: "@karpathy",
+      topic: "AI应用 & 工具",
+      title: "Karpathy推荐用Claude Code快速构建YouTube缩略图扩展",
+      what: "Karpathy回复表示，可直接让Claude Code创建并部署浏览器扩展，显示视频中间帧作为缩略图而非用户上传版本，并包含切换开关，效果良好。",
+      why: "进一步证明强大AI编程代理可快速实现实用工具，延续HackerTube思路，降低对平台默认算法的依赖。",
+      impact: "鼓励更多个人化、反点击诱饵的内容消费工具出现，推动AI辅助开发普及。",
+      time: "2026-11-03 09:38",
+      url: "https://x.com/karpathy/status/2117431189074330032"
+    },
+    {
+      date: "2026-11-03",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "算力 & 硬件",
+      title: "内存厂商运营利润率达80%，短缺预计持续至2030",
+      what: "Micron上季运营利润率80.7%，SK hynix 79.7%，远超历史峰值。SK hynix预期需求超过供应至2030，超半数2027-28产能已签长期协议；Samsung预期2027短缺加剧。利润率广泛覆盖移动、数据中心与云内存。",
+      why: "AI驱动的HBM及常规DRAM需求远超传统周期，导致异常高利润率与持久短缺。",
+      impact: "内存成本上升可能推高AI基础设施总成本，影响推理与训练的经济性。",
+      time: "2026-11-03 08:02",
+      url: "https://x.com/SemiAnalysis_/status/2117407011943952876"
+    },
+    {
+      date: "2026-11-03",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "算力 & 硬件",
+      title: "DeepSeek V4.1 Flash托管经济性：H200无法覆盖租金，B300需35%利用率盈亏平衡",
+      what: "分析显示开源模型托管并非印钞机。H200即使100%利用率也无法覆盖租金成本，B300约35%利用率盈亏平衡。SemiAnalysis认为可用AgentX结果进行类似分析。",
+      why: "高算力成本与低利用率门槛使开源模型商业化复杂，盈利需精细算力规划。",
+      impact: "为模型提供商和用户提供现实成本参考，可能影响部署策略与硬件选择。",
+      time: "2026-11-03 08:44",
+      url: "https://x.com/SemiAnalysis_/status/2117417566905778292"
+    },
+    {
+      date: "2026-11-02",
+      author: "Simon Willison",
+      handle: "@simonw",
+      topic: "AI应用 & 工具",
+      title: "美国人口普查局因行政令将AI改为“超级智能”影响调查数据",
+      what: "Simon更新美国公司AI采用图表时发现，Census Bureau因Executive Order 14434将问题从AI改为“Super Intelligence or SI”，破坏趋势连续性。之前已从“生产商品或服务”改为“任何业务功能”。",
+      why: "官方术语变化导致数据不可比，影响对AI实际采用率的准确跟踪与决策。",
+      impact: "提醒依赖官方数据时注意定义变化，可能扭曲政策与投资参考。",
+      time: "2026-11-03 03:24",
+      url: "https://x.com/simonw/status/2117337139633607167"
+    },
+    {
+      date: "2026-11-02",
+      author: "Stratechery",
+      handle: "@stratechery",
+      topic: "大公司 & 商业模式",
+      title: "Stratechery：Google财报、Facebook似曾相识与Agent Play",
+      what: "新文章讨论Google最新财报表现，与Facebook历史对比，以及Agent Play策略。",
+      why: "分析大公司在AI时代的商业模式调整与竞争动态，尤其是搜索与代理领域。",
+      impact: "提供战略视角，帮助理解Google等巨头在AI转型中的定位与机会。",
+      time: "2026-11-02 19:00",
+      url: "https://x.com/stratechery/status/2117210117011902586"
+    },
     {
       date: "2026-11-02",
       author: "Andrej Karpathy",
