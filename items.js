@@ -1,12 +1,85 @@
 window.DIGEST = {
-  updated: "2026-11-03",
+  updated: "2026-11-04",
   highlights: {
+    "2026-11-04": "今日焦点集中在算力扩张与模型创新：SemiAnalysis深度分析SpaceX计划1.5年内建成13GW AI云成为全球最大；Raschka盘点10款十月开源LLM架构新发布；Simon Willison本地验证前沿模型可直接解读权重。芯片市场方面，Ben Bajarin预测AMD可能在2027年服务器CPU营收超越Intel。",
     "2026-11-03": "今日焦点集中在算力硬件与AI应用工具：SemiAnalysis报道内存厂商运营利润率达约80%，短缺预计持续至2030，并分析DeepSeek模型托管经济性；Karpathy推荐用Claude Code快速构建YouTube缩略图扩展；Simon Willison指出人口普查局因行政令将AI改为“超级智能”影响调查趋势。大公司方面Stratechery讨论Google财报与Agent策略。",
     "2026-11-02": "今日焦点集中在AI应用与模型能力评估：Andrej Karpathy用Claude Opus 5.5在约2小时内构建HackerTube，从20年HN评论中筛选6454个高质量视频推荐，提供无登录个性化推荐与数据导出；SemiAnalysis发布GDPx基准，测试前沿模型在高ROI领域的代理能力，最佳模型仅得12%，并强调安全分类器对评分的影响。其他监控账号相对安静。",
     "2026-11-01": "今日焦点集中在算力硬件与软件优化：SemiAnalysis报道AMD MI355X通过软件调优与更大HBM容量，在Kimi K3代理推理上实现比B200高达2倍的性能每美元；同时社区为Hopper编写融合内核，将解码速度提升最高38%。大公司与模型研究方面相对平静。",
     "2026-10-31": "今日主要关注芯片与基础设施领域：SemiAnalysis报道混合键合技术在先进封装中的进展，以及AI网络模型对集群部署的分析；Canon因中国份额损失削减步进机计划，反映国产化进展。Ben Bajarin强调DPU在AI控制平面安全中的重要性。大公司方面，Stratechery周刊讨论Anthropic数字与互联网变化。"
   },
   items: [
+    {
+      date: "2026-11-04",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "算力 & 硬件",
+      title: "SpaceX将成全球最大AI云，1.5年内实现13GW",
+      what: "SemiAnalysis新文分析Elon再次行动：SpaceX将成为世界上最大的AI云，计划在1.5年内建成13GW算力，已有3.6GW在建，目标相当于Google过去27年数据中心容量。",
+      why: "利用快速建设能力与电力规划，解决地面瓶颈，需求强劲可支撑高ARR。",
+      impact: "可能大幅增加全球可用AI算力供应，改变数据中心竞争格局与硬件需求预期。",
+      time: "2026-11-04 04:48",
+      url: "https://x.com/SemiAnalysis_/status/2117720668145852429"
+    },
+    {
+      date: "2026-11-04",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "芯片 & 基础设施",
+      title: "Anthropic用Claude加速芯片设计，GDPx纳入34项任务",
+      what: "SemiAnalysis回应Anthropic向IPO投资者表示15人芯片团队已用Claude加速设计，强调AI在芯片设计将创造巨大价值，因此在GDPx基准中包含34项前沿芯片设计任务。",
+      why: "前沿模型在高ROI专业领域如芯片设计的代理能力尚早，但潜力巨大。",
+      impact: "可能加速半导体研发效率，影响Nvidia、AMD等传统芯片厂商的竞争地位。",
+      time: "2026-11-04 08:23",
+      url: "https://x.com/SemiAnalysis_/status/2117774796851224855"
+    },
+    {
+      date: "2026-11-03",
+      author: "Ben Bajarin",
+      handle: "@BenBajarin",
+      topic: "芯片 & 基础设施",
+      title: "AMD可能在2027年服务器CPU营收超越Intel",
+      what: "基于Intel上季度表现与AMD指导上调，Ben认为AMD很可能在2027年服务器CPU营收（甚至份额）超过Intel，市场将达800-1000亿美元，AMD数据中心收入占比超80%。",
+      why: "客户扩大Epic与Instinct部署计划，供应增加，增长指导从70%上调。",
+      impact: "进一步改变服务器CPU市场格局，加速x86竞争，影响数据中心采购策略。",
+      time: "2026-11-04 07:01",
+      url: "https://x.com/BenBajarin/status/2117754150926889040"
+    },
+    {
+      date: "2026-11-03",
+      author: "Simon Willison",
+      handle: "@simonw",
+      topic: "模型能力 & 研究",
+      title: "本地复现权重解读：Qwen 27B成功解析浮点权重",
+      what: "针对GPT-6 Astra可直接解读模型权重的热门论文，Simon在本地MacBook用Qwen 3.8 27B尝试，经45+分钟后模型实现类似能力。",
+      why: "展示前沿模型对权重空间的理解能力，可能开启权重空间编程新范式。",
+      impact: "降低权重编辑门槛，可能影响模型调试、安全与高效微调方式。",
+      time: "2026-11-04 00:31",
+      url: "https://x.com/simonw/status/2117655816581071203"
+    },
+    {
+      date: "2026-11-03",
+      author: "Sebastian Raschka",
+      handle: "@rasbt",
+      topic: "模型能力 & 研究",
+      title: "十月开源LLM架构大爆发：10款新模型盘点",
+      what: "Raschka总结过去一个月10款开源LLM架构发布，包括Kolibri-1、Ling 3.1 Flash、Muse Spark Open、Nemotron 3.5等，涵盖GQA、SWA、MLA、LatentMoE、Mamba等多种设计。",
+      why: "开源社区在模型架构上持续创新，提供多种高效注意力与混合架构选项。",
+      impact: "丰富开源模型生态，加速研究与定制化部署，可能推动更高效的推理与训练。",
+      time: "2026-11-03 23:19",
+      url: "https://x.com/rasbt/status/2117637894315626719"
+    },
+    {
+      date: "2026-11-03",
+      author: "Stratechery",
+      handle: "@stratechery",
+      topic: "大公司 & 商业模式",
+      title: "Stratechery：Apple财报、内存问题与硬件公司回归",
+      what: "新文章讨论Apple最新财报表现、内存短缺问题，以及硬件公司回归趋势。",
+      why: "分析内存成本对大公司的影响，以及AI时代硬件与软件平衡。",
+      impact: "提供对Apple及硬件厂商在AI基础设施挑战下的战略洞察。",
+      time: "2026-11-03 19:00",
+      url: "https://x.com/stratechery/status/2117572500783763819"
+    },
     {
       date: "2026-11-03",
       author: "Andrej Karpathy",
@@ -121,7 +194,7 @@ window.DIGEST = {
       handle: "@SemiAnalysis_",
       topic: "芯片 & 基础设施",
       title: "混合键合技术加速3D集成与先进封装",
-      what: "在Semicon West上，EV Group展示die-to-wafer混合键合的两种主要方法：直接放置和集体die-to-wafer。直接放置简单但overlay受限于键合头约1µm，集体方式将最终键合移至W2W工具以提高吞吐量。",
+      what: "在Semicon West上，EV Group展示die-to-wafer混合键合的两种主要方法：直接放置和集体die-to-wafer。直接放置简单但overlay受限于键合头纡1µm，集体方式将最终键合移至W2W工具以提高吞吐量。",
       why: "混合键合是实现更高密度3D集成和先进封装的关键技术，对AI芯片性能提升至关重要。",
       impact: "有望加速AI芯片的封装密度提升，降低成本并提高互连效率。",
       time: "2026-10-30 23:08",
