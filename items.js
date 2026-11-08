@@ -1,6 +1,7 @@
 window.DIGEST = {
-  updated: "2026-11-07",
+  updated: "2026-11-08",
   highlights: {
+    "2026-11-08": "今日焦点集中在中国算力建设与模型架构优化：SemiAnalysis参观内蒙古“中国Stargate”风电驱动800MW园区，一年建成120MW，并展示5MW SST-native 800V DC试点与无中央冷机冷却设计；同时报道小米MiMo转向因果编码器-解码器架构，HySparse2使提示仅运行25/49层，在1M上下文下预填充计算减少5倍、KV缓存缩小4.5倍。Karpathy用Claude Code三分钟一键生成TristanTube，聚合4.7万高质量技术视频并支持TV模式。Jim Fan预告CoRL主题演讲将展示非凡自主机器人演示。",
     "2026-11-07": "今日焦点集中在算力融资与封装材料：SemiAnalysis认为GPU融资收紧更可能支撑租金而非造成过剩，因减缓新部署而需求仍紧；2027年约50GW容量中最多2-3GW有风险，一年期H100合同价格自3月上涨约21%。同时介绍Nittobo Vlex超低CTE玻璃布，助力下一代更大半导体封装基板的尺寸稳定性。",
     "2026-11-06": "今日焦点集中在物理AI推理加速与基准评估质量：NVIDIA Jim Fan团队发布VFlash System-1 VLM，通过并行解码视觉原语实现机器人动作解码最高12倍提速、整体推理5.1倍加速，并降低3D轨迹误差最高61%；SemiAnalysis批评流行AI基准质量低下、易含不公平设计；SGLang团队为Kimi K3.1提供Day-0高性能支持并开箱即用megakernel。",
     "2026-11-05": "今日焦点集中在算力基础设施的政治与质量挑战：SemiAnalysis报道Microsoft因IREN延迟导致Q3资本开支少50亿美元，IREN被指为最差站点；Stratechery分析数据中心在选举中普遍失利，政治阻力可能成为长期约束；Dylan分享Together Compiler用agent实现持续编译优化推理性能；Karpathy反思如何从1970年代正确预测AI发展路径。",
@@ -11,6 +12,54 @@ window.DIGEST = {
     "2026-10-31": "今日主要关注芯片与基础设施领域：SemiAnalysis报道混合键合技术在先进封装中的进展，以及AI网络模型对集群部署的分析；Canon因中国份额损失削减步进机计划，反映国产化进展。Ben Bajarin强调DPU在AI控制平面安全中的重要性。大公司方面，Stratechery周刊讨论Anthropic数字与互联网变化。"
   },
   items: [
+    {
+      date: "2026-11-08",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "算力 & 硬件",
+      title: "SemiAnalysis参观内蒙古中国Stargate风电800MW算力园区",
+      what: "SemiAnalysis参观了内蒙古风电驱动的800MW算力园区，一年内建成120MW。该园区包含5MW SST-native 800V DC试点项目，以及无中央冷机的冷却设计。",
+      why: "中国正在快速扩建大规模AI算力基础设施，风电与高效电力/冷却设计是关键创新点。",
+      impact: "展示中国在可再生能源驱动大型数据中心的建设速度与技术路径，可能影响全球算力供应格局与能效标准。",
+      time: "2026-11-07 20:18",
+      url: "https://x.com/SemiAnalysis_/status/2119162511203131591"
+    },
+    {
+      date: "2026-11-08",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "模型能力 & 研究",
+      title: "小米MiMo转向因果编码器-解码器，HySparse2大幅降低长上下文计算与KV",
+      what: "DeepSeek V4.1 Flash之后，小米MiMo正在为下一代模型转向因果编码器-解码器架构。HySparse2中提示仅通过49层中的25层，解码器KV从编码器状态投影。相较MiMo-V2，在1M上下文下预填充计算减少5倍，KV缓存缩小4.5倍。",
+      why: "编码器-解码器与稀疏层设计可显著降低长上下文的计算与内存开销，提升效率。",
+      impact: "推动长上下文模型更高效架构，降低推理成本，可能影响开源模型下一代设计趋势。",
+      time: "2026-11-07 18:57",
+      url: "https://x.com/SemiAnalysis_/status/2119142144749293863"
+    },
+    {
+      date: "2026-11-08",
+      author: "Andrej Karpathy",
+      handle: "@karpathy",
+      topic: "AI应用 & 工具",
+      title: "Karpathy一键生成TristanTube：4.7万技术视频+TV模式",
+      what: "Karpathy基于Tristan发布的顶级YouTube频道列表，用Claude Code在3分钟内一键构建TristanTube（https://karpathy.ai/tristan-tube/），聚合47K超级技术向视频，并支持TV模式休闲观看。",
+      why: "展示Claude Code快速构建高质量内容聚合与观看器的能力，提供更优推荐体验。",
+      impact: "降低个性化内容平台构建门槛，促进AI辅助快速原型开发，可能启发更多类似工具创新。",
+      time: "2026-11-07 17:07",
+      url: "https://x.com/karpathy/status/2119114537442189652"
+    },
+    {
+      date: "2026-11-08",
+      author: "Jim Fan",
+      handle: "@DrJimFan",
+      topic: "模型能力 & 研究",
+      title: "Jim Fan预告CoRL主题演讲将展示非凡自主机器人演示",
+      what: "Jim Fan发布CoRL主题演讲预告：11月9日奥斯汀Hilton，下午1:45。他表示将展示某些非凡之事，并随后回复确认为真实自主、无加速的机器人演示。",
+      why: "物理AI与机器人自主能力是当前研究前沿，CoRL是重要会议。",
+      impact: "可能揭示NVIDIA在具身智能与机器人控制方面的新进展，推动物理AI研究兴趣。",
+      time: "2026-11-07 17:14",
+      url: "https://x.com/DrJimFan/status/2119116338765685094"
+    },
     {
       date: "2026-11-07",
       author: "SemiAnalysis",
