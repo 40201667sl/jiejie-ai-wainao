@@ -1,6 +1,7 @@
 window.DIGEST = {
-  updated: "2026-11-08",
+  updated: "2026-11-09",
   highlights: {
+    "2026-11-09": "今日焦点集中在芯片性能突破与政治风险：SemiAnalysis报道AMD MI355借助TileRT软件在长上下文推理上实现比GB300 NVL72快1.42倍的性能，达1330 p90 tok/s/user；同时Dylan Patel指出Jensen Huang或将面临民主党国会对向中国销售GPU的深入调查，增加政治不确定性。",
     "2026-11-08": "今日焦点集中在中国算力建设与模型架构优化：SemiAnalysis参观内蒙古“中国Stargate”风电驱动800MW园区，一年建成120MW，并展示5MW SST-native 800V DC试点与无中央冷机冷却设计；同时报道小米MiMo转向因果编码器-解码器架构，HySparse2使提示仅运行25/49层，在1M上下文下预填充计算减少5倍、KV缓存缩小4.5倍。Karpathy用Claude Code三分钟一键生成TristanTube，聚合4.7万高质量技术视频并支持TV模式。Jim Fan预告CoRL主题演讲将展示非凡自主机器人演示。",
     "2026-11-07": "今日焦点集中在算力融资与封装材料：SemiAnalysis认为GPU融资收紧更可能支撑租金而非造成过剩，因减缓新部署而需求仍紧；2027年约50GW容量中最多2-3GW有风险，一年期H100合同价格自3月上涨约21%。同时介绍Nittobo Vlex超低CTE玻璃布，助力下一代更大半导体封装基板的尺寸稳定性。",
     "2026-11-06": "今日焦点集中在物理AI推理加速与基准评估质量：NVIDIA Jim Fan团队发布VFlash System-1 VLM，通过并行解码视觉原语实现机器人动作解码最高12倍提速、整体推理5.1倍加速，并降低3D轨迹误差最高61%；SemiAnalysis批评流行AI基准质量低下、易含不公平设计；SGLang团队为Kimi K3.1提供Day-0高性能支持并开箱即用megakernel。",
@@ -12,6 +13,30 @@ window.DIGEST = {
     "2026-10-31": "今日主要关注芯片与基础设施领域：SemiAnalysis报道混合键合技术在先进封装中的进展，以及AI网络模型对集群部署的分析；Canon因中国份额损失削减步进机计划，反映国产化进展。Ben Bajarin强调DPU在AI控制平面安全中的重要性。大公司方面，Stratechery周刊讨论Anthropic数字与互联网变化。"
   },
   items: [
+    {
+      date: "2026-11-09",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "芯片 & 基础设施",
+      title: "AMD MI355通过TileRT软件在长上下文上比GB300 NVL72快1.42倍",
+      what: "SemiAnalysis报告AMD MI355使用TileRT软件在长上下文工作负载上比GB300 NVL72快1.42倍，达到1330 p90 tok/s/user。感谢AMD提供MI350集群给TileRT维护者实现这一结果。",
+      why: "软件优化使AMD硬件在特定推理场景下超越NVIDIA旗舰集群，展示软件栈对性能的关键作用。",
+      impact: "可能推动AMD在AI推理市场的竞争力，鼓励更多针对AMD的优化软件开发，影响客户硬件选择。",
+      time: "2026-11-09 03:50",
+      url: "https://x.com/SemiAnalysis_/status/2119518001150013823"
+    },
+    {
+      date: "2026-11-09",
+      author: "Dylan Patel",
+      handle: "@dylan522p",
+      topic: "大公司 & 商业模式",
+      title: "Dylan分析Jensen可能面临国会对华GPU销售调查",
+      what: "Dylan Patel表示未来6个月Jensen不会有事，媒体/金融故事会降温，但民主党可能传唤他到国会，深入调查向中国公司销售GPU，并严厉质询，届时可能出问题。",
+      why: "政治环境可能对NVIDIA对华业务构成风险，即使短期无立即影响。",
+      impact: "增加NVIDIA面临的监管与政治不确定性，可能影响其中国市场策略与投资者情绪。",
+      time: "2026-11-09 07:30",
+      url: "https://x.com/dylan522p/status/2119573238456127692"
+    },
     {
       date: "2026-11-08",
       author: "SemiAnalysis",
