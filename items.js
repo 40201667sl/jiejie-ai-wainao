@@ -1,11 +1,96 @@
 window.DIGEST = {
-  updated: "2026-11-11",
+  updated: "2026-11-12",
   highlights: {
+    "2026-11-12": "今日焦点集中在生物AI与硬件突破：Demis Hassabis宣布AlphaGenome 2，能按特定细胞类型预测DNA变异影响，识别因果变异近乎翻倍；SemiAnalysis报道Google TPU 8i Max（Whalefish）双芯片封装、HBM带宽翻倍以支持大上下文推理；NVIDIA与RadixArk将SGLang在Rubin上的性能再提升最多10倍。同时持久代理成为AI使用下一关键解锁，Nvidia领导层变动传闻升温。",
     "2026-11-11": "今日焦点集中在新模型发布与基础设施：Demis Hassabis宣布Gemini 4 Carbon推出并演示逆向工程旧游戏；Sebastian Raschka分析LLM注意力从全向混合转变以支持长上下文；SemiAnalysis报道中国内蒙古数据中心建设成本仅为美国五分之一且速度极快；同时Claude扩展生产力工具，平台竞争加剧。",
     "2026-11-10": "今日焦点集中在模型代理能力与物理AI突破：SemiAnalysis报告Anthropic Fable 5.2登顶GDPx榜单得分16.4%，在芯片设计与软件工程上显著领先Opus 5.5，测试更全面且成本上升；NVIDIA Jim Fan在CoRL发布GR00T 2世界动作模型，基于Cosmos，支持少样本学习并计划开源。其他方面Ben Bajarin讨论2028 GPU过剩理论与企业AI前景，Simon Willison展示vibe coding趣味应用。",
     "2026-11-09": "今日焦点集中在芯片性能突破与政治风险：SemiAnalysis报道AMD MI355借助TileRT软件在长上下文推理上实现比GB300 NVL72快1.42倍的性能，达1330 p90 tok/s/user；同时Dylan Patel指出Jensen Huang或将面临民主党国会对向中国销售GPU的深入调查，增加政治不确定性。"
   },
   items: [
+    {
+      date: "2026-11-12",
+      author: "Demis Hassabis",
+      handle: "@demishassabis",
+      topic: "模型能力 & 研究",
+      title: "AlphaGenome 2正式推出：按细胞类型预测DNA变异影响",
+      what: "Demis Hassabis宣布AlphaGenome 2，新一代DNA序列模型。它能预测DNA变异在不同特定细胞类型和细胞状态下的影响，训练于超1亿单细胞数据。在免疫细胞基准上识别因果变异和方向效应近乎翻倍，并通过API向学术研究开放。",
+      why: "弥合了同一DNA在不同细胞中表现不同的难题，帮助科学家快速定位疾病相关变异、基因和细胞类型。",
+      impact: "可能加速复杂疾病机制研究和药物靶点发现，缩小实验搜索空间。",
+      time: "2026-11-12 01:12",
+      url: "https://x.com/demishassabis/status/2120565316619284734"
+    },
+    {
+      date: "2026-11-12",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "芯片 & 基础设施",
+      title: "Google推出TPU 8i Max（Whalefish）：双芯片封装、HBM带宽翻倍",
+      what: "SemiAnalysis指出Google推出TPU 8i Max（又称Whalefish）。该系统将两颗TPU 8i芯片封装在一起，每包装达384GB HBM，改用8-hi HBM，带宽翻倍，推理性能显著增强，同时提升单机柜密度。",
+      why: "针对大上下文和多代理工作负载的内存墙问题，带宽比容量更关键于推理。",
+      impact: "加强Google在代理时代的推理竞争力，推动大上下文模型更高效部署。",
+      time: "2026-11-12 02:03",
+      url: "https://x.com/SemiAnalysis_/status/2120578135594791297"
+    },
+    {
+      date: "2026-11-12",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "算力 & 硬件",
+      title: "NVIDIA与RadixArk将SGLang Rubin性能提升最多10倍",
+      what: "SemiAnalysis发布MOG ALERT：NVIDIA与@radixark合作，在不到5天内将SGLang在Rubin上的性能再次提升最多10倍。",
+      why: "推理框架优化进度极快，直接影响实际部署成本与吐吐量。",
+      impact: "加速新一代GPU的实用效率，利好推理侧应用。",
+      time: "2026-11-12 23:03",
+      url: "https://x.com/SemiAnalysis_/status/2120532776403247464"
+    },
+    {
+      date: "2026-11-12",
+      author: "Dylan Patel",
+      handle: "@dylan522p",
+      topic: "AI应用 & 工具",
+      title: "持久代理是AI使用的下一个解锁，已占支出45%",
+      what: "Dylan Patel指出持久代理（Persistent Agents）是AI使用的下一关键解锁。他们的AI支出中45%已用于持久代理，认为Claude Tags表现不佳，OpenAI的Slack代理更差，主要使用Perplexity Computer。",
+      why: "从单次交互走向持续运行的代理，是实际产出能力的重要转变。",
+      impact: "推动代理产品竞争加剧，影响企业工作流嵌入方式。",
+      time: "2026-11-12 04:40",
+      url: "https://x.com/dylan522p/status/2120617704101155270"
+    },
+    {
+      date: "2026-11-12",
+      author: "Jim Fan",
+      handle: "@DrJimFan",
+      topic: "模型能力 & 研究",
+      title: "GR00T 2真实1x速度完成化学实验端到端控制",
+      what: "Jim Fan发布GR00T 2控制真实灵巧手完成化学实验室实验（并自行清理）的完整视频，未剪辑、1x真实速度。属于新系列的第一集。",
+      why: "展示物理AI在长视野、灵巧操作上的实际进展，而非加速演示。",
+      impact: "增强对GR00T 2实用能力的信心，推动开源机器人生态。",
+      time: "2026-11-12 23:32",
+      url: "https://x.com/DrJimFan/status/2120540201994846253"
+    },
+    {
+      date: "2026-11-12",
+      author: "Ben Bajarin",
+      handle: "@BenBajarin",
+      topic: "大公司 & 商业模式",
+      title: "若Nvidia需临时CEO，Ian Buck可能上任",
+      what: "Ben Bajarin认为若情况需要，Ian Buck可能被任命为CEO（或临时），直到调查结束或寻找外部人选。他近年与Ian有交流，认为其能力足够。并比较了此次震动与当年Steve Jobs癌症消息的影响。",
+      why: "反映在领导层传闻下，行业对Nvidia稳定性的关注。",
+      impact: "可能影响短期市场情绪与长期战略继承性判断。",
+      time: "2026-11-12 08:04",
+      url: "https://x.com/BenBajarin/status/2120669086699159972"
+    },
+    {
+      date: "2026-11-12",
+      author: "Stratechery",
+      handle: "@stratechery",
+      topic: "大公司 & 商业模式",
+      title: "Intel与AMD财报与分歧分析",
+      what: "Stratechery发布付费文章，覆盖Intel财报、AMD财报以及两者的分歧走势。",
+      why: "在AI算力需求增长背景下，两家芯片公司的财务与竞争态势值得关注。",
+      impact: "为观察x86阵营在AI时代的表现提供参考。",
+      time: "2026-11-12 19:16",
+      url: "https://x.com/stratechery/status/2120475624624271664"
+    },
     {
       date: "2026-11-11",
       author: "Demis Hassabis",
