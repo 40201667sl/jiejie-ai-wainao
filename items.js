@@ -1,12 +1,85 @@
 window.DIGEST = {
-  updated: "2026-11-12",
+  updated: "2026-11-13",
   highlights: {
+    "2026-11-13": "今日焦点集中在Gemini 4 Hydrogen发布：Demis Hassabis宣布新模型，速度与智能均衡，面向日常编码与代理使用，并对所有用户开放。Simon Willison分析其定价策略，Hydrogen比Carbon/Argon便宜25%，但性能有所折中。SemiAnalysis关注Trump访深圳APEC期间芯片供应链与推理优化，Nvidia领导层传闻持续发酵。",
     "2026-11-12": "今日焦点集中在生物AI与硬件突破：Demis Hassabis宣布AlphaGenome 2，能按特定细胞类型预测DNA变异影响，识别因果变异近乎翻倍；SemiAnalysis报道Google TPU 8i Max（Whalefish）双芯片封装、HBM带宽翻倍以支持大上下文推理；NVIDIA与RadixArk将SGLang在Rubin上的性能再提升最多10倍。同时持久代理成为AI使用下一关键解锁，Nvidia领导层变动传闻升温。",
     "2026-11-11": "今日焦点集中在新模型发布与基础设施：Demis Hassabis宣布Gemini 4 Carbon推出并演示逆向工程旧游戏；Sebastian Raschka分析LLM注意力从全向混合转变以支持长上下文；SemiAnalysis报道中国内蒙古数据中心建设成本仅为美国五分之一且速度极快；同时Claude扩展生产力工具，平台竞争加剧。",
     "2026-11-10": "今日焦点集中在模型代理能力与物理AI突破：SemiAnalysis报告Anthropic Fable 5.2登顶GDPx榜单得分16.4%，在芯片设计与软件工程上显著领先Opus 5.5，测试更全面且成本上升；NVIDIA Jim Fan在CoRL发布GR00T 2世界动作模型，基于Cosmos，支持少样本学习并计划开源。其他方面Ben Bajarin讨论2028 GPU过剩理论与企业AI前景，Simon Willison展示vibe coding趣味应用。",
     "2026-11-09": "今日焦点集中在芯片性能突破与政治风险：SemiAnalysis报道AMD MI355借助TileRT软件在长上下文推理上实现比GB300 NVL72快1.42倍的性能，达1330 p90 tok/s/user；同时Dylan Patel指出Jensen Huang或将面临民主党国会对向中国销售GPU的深入调查，增加政治不确定性。"
   },
   items: [
+    {
+      date: "2026-11-13",
+      author: "Demis Hassabis",
+      handle: "@demishassabis",
+      topic: "模型能力 & 研究",
+      title: "Gemini 4 Hydrogen正式发布：极速智能模型面向大众",
+      what: "Demis Hassabis宣布发布Gemini 4 Hydrogen，一个极具速度与智能的模型，专为日常编码、代理工作和全面使用而建造。可在Google AI Studio、Gemini API、Gemini应用、Google Search等所有层级使用，面向所有用户开放。",
+      why: "将Gemini 4的能力带给更广泛用户，平衡速度与智能，推动实际应用落地。",
+      impact: "降低使用门槛，可能加速开发者和普通用户的AI采用，与其他模型竞争加剧。",
+      time: "2026-11-13 02:11",
+      url: "https://x.com/demishassabis/status/2120942605466800374"
+    },
+    {
+      date: "2026-11-13",
+      author: "Simon Willison",
+      handle: "@simonw",
+      topic: "AI应用 & 工具",
+      title: "Gemini 4定价策略分析：Hydrogen便宜25%但性能折中",
+      what: "Simon Willison指出Gemini 4定价较为混乱，Argon与Carbon令牌价相同，新Hydrogen仅比之便宜25%。Carbon/Argon将于12月1日涨价2倍。Hydrogen的鹦鹉测试表现明显较差。",
+      why: "澄清新模型的成本结构与性能折中，帮助用户做出合理选择。",
+      impact: "影响开发者对不同Gemini版本的采用决策，推动更透明定价。",
+      time: "2026-11-13 08:36",
+      url: "https://x.com/simonw/status/2121039423441981444"
+    },
+    {
+      date: "2026-11-13",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "芯片 & 基础设施",
+      title: "Trump访深圳APEC，映射芯片供应链与AI安全议题",
+      what: "SemiAnalysis报道Trump将于11月18-19日在深圳参加APEC，预计与习近平会面。芯片与AI安全将成为关注点。他们映射了深圳芯片供应链：67家公司，从EDA、IP到晶圆、设备与材料。深圳IC产业2025年营收RMB 3610亿，增长27%。",
+      why: "凸显地缘政治与产业布局对芯片供应的影响，深圳作为重要设计与制造中心。",
+      impact: "可能影响中美芯片贸易与供应链安全讨论，加大行业观察价值。",
+      time: "2026-11-13 07:20",
+      url: "https://x.com/SemiAnalysis_/status/2121020384757559698"
+    },
+    {
+      date: "2026-11-13",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "算力 & 硬件",
+      title: "vLLM优化DeepSeek-V4.1-Flash在Rubin上吞吐量大幅提升",
+      what: "SemiAnalysis称赞vLLM团队将DeepSeek-V4.1-Flash优化于Vera Rubin NVL72，在SemiAnalysis AgentX上达到58倍于GB300 NVL72的吞吐量，达1.7M tokens/s/GPU与387 tokens/s/user。峰值达2.52M tokens/s/GPU。",
+      why: "推理框架与新硬件的深度优化显著提升实际部署效率。",
+      impact: "加速新一代GPU的实用化，降低推理成本，利好开源模型部署。",
+      time: "2026-11-13 06:55",
+      url: "https://x.com/SemiAnalysis_/status/2121014081075159335"
+    },
+    {
+      date: "2026-11-13",
+      author: "Ian Cutress",
+      handle: "@IanCutress",
+      topic: "大公司 & 商业模式",
+      title: "Nvidia CEO继任者预测市场赔率更新：Ian Buck仍领先",
+      what: "Ian Cutress更新Nvidia下任CEO预测市场赔率：Ian Buck 32%，Colette Kress 17%，Rene Haas 13%，Johny Srouji 10%，Jensen Huang 4%等。讨论了多位潜在继任者的优势与经验。",
+      why: "在领导层变动传闻下，市场对稳定性与技术继承的关注。",
+      impact: "可能影响短期股价与行业对Nvidia战略连续性的判断。",
+      time: "2026-11-13 09:51",
+      url: "https://x.com/IanCutress/status/2121058327736340536"
+    },
+    {
+      date: "2026-11-13",
+      author: "Ben Bajarin",
+      handle: "@BenBajarin",
+      topic: "芯片 & 基础设施",
+      title: "苹果Secure Exclaves：AI穿戴设备的先进安全架构",
+      what: "Ben Bajarin指出苹果新研究博客展示Secure Exclaves是行业内最先进的环境感知架构，为环境感知定义了雄心勃勃的安全与隐私水准，为Apple AI穿戴设备铺路。",
+      why: "强调穿戴设备在环境感知上的隐私与安全优势。",
+      impact: "可能加速Apple在AI穿戴领域的布局，影响竞争格局。",
+      time: "2026-11-13 05:00",
+      url: "https://x.com/BenBajarin/status/2120985039748079859"
+    },
     {
       date: "2026-11-12",
       author: "Demis Hassabis",
