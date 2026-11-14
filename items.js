@@ -56,6 +56,18 @@ window.DIGEST = {
       impact: "降低使用门槛，可能加速开发者和普通用户的AI采用，与其他模型竞争加剧。",
       time: "2026-11-13 02:11",
       url: "https://x.com/demishassabis/status/2120942605466800374"
+    },
+    {
+      date: "2026-11-13",
+      author: "Simon Willison",
+      handle: "@simonw",
+      topic: "AI应用 & 工具",
+      title: "Gemini 4定价策略分析：Hydrogen便宜25%但性能折中",
+      what: "Simon Willison指出Gemini 4定价较为混乱，Argon与Carbon令牌价相同，新Hydrogen仅比之便宜25%。Carbon/Argon将于12月1日涨价2倍。Hydrogen的鹦鹉测试表现明显较差。",
+      why: "澄清新模型的成本结构与性能折中，帮助用户做出合理选择。",
+      impact: "影响开发者对不同Gemini版本的采用决策，推动更透明定价。",
+      time: "2026-11-13 08:36",
+      url: "https://x.com/simonw/status/2121039423441981444"
     }
   ]
 };
