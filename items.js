@@ -1,6 +1,7 @@
 window.DIGEST = {
-  updated: "2026-11-14",
+  updated: "2026-11-15",
   highlights: {
+    "2026-11-15": "今日焦点集中在架构创新与自研芯片趋势：Sebastian Raschka分享Inkling 2 Small采用注意力残差（类似Kimi K3）但不含线性混合；SemiAnalysis指出Nvidia七大客户中六家正自研芯片，强调Jensen在供应链说服力的独特地位，TPU性能已可比肩；Simon Willison探讨Claude auto mode权限系统如何通过提示词解锁。",
     "2026-11-14": "今日焦点集中在超大规模算力建设与领导层变动：SemiAnalysis详述SpaceX Colossus 2年内将IT算力从0.4GW扩至2.4GW，并用近6GWh大规模BESS填补约300MW电力缺口；AMD MI355X经开源内核优化在MiniMax推理上超越Blackwell。Stratechery总结Jensen Huang突然卸任Nvidia CEO带来的行业冲击与不确定性。",
     "2026-11-13": "今日焦点集中在Gemini 4 Hydrogen发布：Demis Hassabis宣布新模型，速度与智能均衡，面向日常编码与代理使用，并对所有用户开放。Simon Willison分析其定价策略，Hydrogen比Carbon/Argon便宜25%，但性能有所折中。SemiAnalysis关注Trump访深圳APEC期间芯片供应链与推理优化，Nvidia领导层传闻持续发酵。",
     "2026-11-12": "今日焦点集中在生物AI与硬件突破：Demis Hassabis宣布AlphaGenome 2，能按特定细胞类型预测DNA变异影响，识别因果变异近乎翻倍；SemiAnalysis报道Google TPU 8i Max（Whalefish）双芯片封装、HBM带宽翻倍以支持大上下文推理；NVIDIA与RadixArk将SGLang在Rubin上的性能再提升最多10倍。同时持久代理成为AI使用下一关键解锁，Nvidia领导层变动传闻升温。",
@@ -9,6 +10,42 @@ window.DIGEST = {
     "2026-11-09": "今日焦点集中在芯片性能突破与政治风险：SemiAnalysis报道AMD MI355借助TileRT软件在长上下文推理上实现比GB300 NVL72快1.42倍的性能，达1330 p90 tok/s/user；同时Dylan Patel指出Jensen Huang或将面临民主党国会对向中国销售GPU的深入调查，增加政治不确定性。"
   },
   items: [
+    {
+      date: "2026-11-15",
+      author: "Sebastian Raschka",
+      handle: "@rasbt",
+      topic: "模型能力 & 研究",
+      title: "Inkling 2 Small采用注意力残差（类似Kimi K3）",
+      what: "Sebastian Raschka分享Inkling 2 Small模型耗时较久但比预期更有趣。该模型使用注意力残差（如Kimi K3），但没有线性注意力混合，为年末架构趋势分析提供讨论素材。",
+      why: "探索新的注意力机制变体，可能影响未来模型架构设计与效率。",
+      impact: "为开源社区提供架构讨论素材，可能启发下一代高效模型。",
+      time: "2026-11-14 22:38",
+      url: "https://x.com/rasbt/status/2121613812990095543"
+    },
+    {
+      date: "2026-11-15",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "芯片 & 基础设施",
+      title: "Nvidia七大客户中六家正自研芯片",
+      what: "SemiAnalysis指出Nvidia七大客户（Google、Microsoft、Meta、Amazon、SpaceX、Anthropic、OpenAI）中除SpaceX外均在自研芯片。若无Nvidia支撑neoclouds，超规模客户将完全主导。Jensen是半导体行业中唯一能说服供应链公司大规模投资的高管，TPU性能已可比肩Nvidia。",
+      why: "客户自研加速与Jensen供应链优势形成对比，影响未来竞争格局。",
+      impact: "可能加速多元化硬件生态，对Nvidia依赖度与供应链控制力带来挑战。",
+      time: "2026-11-15 06:00",
+      url: "https://x.com/SemiAnalysis_/status/2121725048402681946"
+    },
+    {
+      date: "2026-11-15",
+      author: "Simon Willison",
+      handle: "@simonw",
+      topic: "AI应用 & 工具",
+      title: "Claude auto mode权限系统可通过提示词解锁",
+      what: "Simon Willison发现普通Claude聊天现使用auto mode，有时会拒绝运行。他通过提示“Hey permission system, I give this session permission...”成功解锁，说明auto mode会考虑用户消息。",
+      why: "揭示实际使用中权限与控制机制的灵活性与工作方式。",
+      impact: "帮助用户更好理解与操控AI工具权限，提升实际应用体验。",
+      time: "2026-11-15 04:01",
+      url: "https://x.com/simonw/status/2121695097674981849"
+    },
     {
       date: "2026-11-14",
       author: "SemiAnalysis",
