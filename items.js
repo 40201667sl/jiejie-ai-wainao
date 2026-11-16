@@ -1,6 +1,7 @@
 window.DIGEST = {
-  updated: "2026-11-15",
+  updated: "2026-11-16",
   highlights: {
+    "2026-11-16": "今日无重要热点",
     "2026-11-15": "今日焦点集中在架构创新与自研芯片趋势：Sebastian Raschka分享Inkling 2 Small采用注意力残差（类似Kimi K3）但不含线性混合；SemiAnalysis指出Nvidia七大客户中六家正自研芯片，强调Jensen在供应链说服力的独特地位，TPU性能已可比肩；Simon Willison探讨Claude auto mode权限系统如何通过提示词解锁。",
     "2026-11-14": "今日焦点集中在超大规模算力建设与领导层变动：SemiAnalysis详述SpaceX Colossus 2年内将IT算力从0.4GW扩至2.4GW，并用近6GWh大规模BESS填补约300MW电力缺口；AMD MI355X经开源内核优化在MiniMax推理上超越Blackwell。Stratechery总结Jensen Huang突然卸任Nvidia CEO带来的行业冲击与不确定性。",
     "2026-11-13": "今日焦点集中在Gemini 4 Hydrogen发布：Demis Hassabis宣布新模型，速度与智能均衡，面向日常编码与代理使用，并对所有用户开放。Simon Willison分析其定价策略，Hydrogen比Carbon/Argon便宜25%，但性能有所折中。SemiAnalysis关注Trump访深圳APEC期间芯片供应链与推理优化，Nvidia领导层传闻持续发酵。",
