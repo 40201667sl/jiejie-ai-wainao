@@ -1,6 +1,7 @@
 window.DIGEST = {
-  updated: "2026-11-16",
+  updated: "2026-11-17",
   highlights: {
+    "2026-11-17": "今日焦点集中在编码代理安全与AMD大规模算力落地：Simon Willison介绍外部沙箱模式，让代理在本地运行但代码在隔离沙箱执行，提升安全性；SemiAnalysis展示Trainium3 Neuron分析栈的精细程度可生成像素艺术；Dylan Patel评论TensorWave与OpenAI达成457MW AMD MI455X专用基础设施大单，首批2027年上线，标志AMD在前沿AI部署中的实质进展。",
     "2026-11-16": "今日无重要热点",
     "2026-11-15": "今日焦点集中在架构创新与自研芯片趋势：Sebastian Raschka分享Inkling 2 Small采用注意力残差（类似Kimi K3）但不含线性混合；SemiAnalysis指出Nvidia七大客户中六家正自研芯片，强调Jensen在供应链说服力的独特地位，TPU性能已可比肩；Simon Willison探讨Claude auto mode权限系统如何通过提示词解锁。",
     "2026-11-14": "今日焦点集中在超大规模算力建设与领导层变动：SemiAnalysis详述SpaceX Colossus 2年内将IT算力从0.4GW扩至2.4GW，并用近6GWh大规模BESS填补约300MW电力缺口；AMD MI355X经开源内核优化在MiniMax推理上超越Blackwell。Stratechery总结Jensen Huang突然卸任Nvidia CEO带来的行业冲击与不确定性。",
@@ -11,6 +12,54 @@ window.DIGEST = {
     "2026-11-09": "今日焦点集中在芯片性能突破与政治风险：SemiAnalysis报道AMD MI355借助TileRT软件在长上下文推理上实现比GB300 NVL72快1.42倍的性能，达1330 p90 tok/s/user；同时Dylan Patel指出Jensen Huang或将面临民主党国会对向中国销售GPU的深入调查，增加政治不确定性。"
   },
   items: [
+    {
+      date: "2026-11-17",
+      author: "Simon Willison",
+      handle: "@simonw",
+      topic: "AI应用 & 工具",
+      title: "探索编码代理的外部沙箱模式",
+      what: "Simon Willison介绍外部沙箱模式：编码代理在Mac本地运行，但实际代码在WebAssembly、QEMU或Apple Container沙箱中执行。他与Prime Radiant合作提供Claude Code、Codex和Pi的demo，并包含可选HTTP/HTTPS允许列表代理及凭据替换机制，避免直接共享密钥。",
+      why: "提升使用编码代理时的安全性与可控性，降低不受信任代码带来的风险。",
+      impact: "可能推动AI编码工具采用更严格的隔离实践，帮助开发者更放心地大规模使用代理。",
+      time: "2026-11-17 09:21",
+      url: "https://x.com/simonw/status/2122500307557265651"
+    },
+    {
+      date: "2026-11-17",
+      author: "Dylan Patel",
+      handle: "@dylan522p",
+      topic: "大公司 & 商业模式",
+      title: "TensorWave与OpenAI达成457MW AMD算力大单",
+      what: "Dylan Patel评论TensorWave与OpenAI、AMD的重大交易。TensorWave将在六年协议下为OpenAI提供457兆瓦专用AI基础设施，由AMD Instinct MI455X GPU和Helios机架系统驱动，为单一租户专用。首批容量预计2027年上半年上线，全部完成于2028年初。这是OpenAI-AMD合作下首个公开neocloud部署。",
+      why: "将AMD硬件大规模落地到前沿AI公司，验证非Nvidia供应链的可行性与规模。",
+      impact: "加速AMD在AI算力市场的份额提升，可能改变超大规模部署的硬件多元化格局。",
+      time: "2026-11-17 05:22",
+      url: "https://x.com/dylan522p/status/2122440317735727351"
+    },
+    {
+      date: "2026-11-17",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "芯片 & 基础设施",
+      title: "Trainium3 Neuron分析栈精细到可生成像素艺术视频",
+      what: "SemiAnalysis展示Trainium3的Neuron profiling与trace栈极其精细精确，能生成整个视频的像素艺术。视频是实际在Trainium3 DMA引擎上运行的profile。团队将于本月开源完整SKILLS.md。",
+      why: "凸显AWS Trainium3在分析和调试工具上的先进程度。",
+      impact: "可能增强开发者对Trainium的信心，促进其在AI训练与推理中的采用，加强AWS软件生态。",
+      time: "2026-11-17 05:21",
+      url: "https://x.com/SemiAnalysis_/status/2122439949907841067"
+    },
+    {
+      date: "2026-11-16",
+      author: "Stratechery",
+      handle: "@stratechery",
+      topic: "大公司 & 商业模式",
+      title: "《Obituaries》：Jensen Huang时代终结的更广泛影响",
+      what: "Stratechery发布《Obituaries》一文，认为Jensen Huang的卸任是许多事物的终结，包括Nvidia的长期前景、AI泡沫，以及美国看待自身在世界中的独特方式。",
+      why: "对Nvidia领导层剧变进行深度反思，连接产业、经济与地缘政治层面。",
+      impact: "引发对Nvidia未来战略连续性、AI产业稳定性及美国科技优势的广泛讨论。",
+      time: "2026-11-16 20:03",
+      url: "https://x.com/stratechery/status/2122299423451656284"
+    },
     {
       date: "2026-11-15",
       author: "Sebastian Raschka",
