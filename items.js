@@ -1,6 +1,7 @@
 window.DIGEST = {
-  updated: "2026-11-17",
+  updated: "2026-11-18",
   highlights: {
+    "2026-11-18": "今日焦点集中在代理使用效率与算力项目落地：SemiAnalysis分析Claude Opus 5.5内部数据，显示更大上下文在已缓存情况下对首token响应时间影响有限（p50仅从0.9s升至1.6s）；同时指出Nebius YE2026业绩与资本开支延迟早在预期之中。Ben Bajarin解读NVIDIA供应链承诺博客，认为持续增长计划已成定局。",
     "2026-11-17": "今日焦点集中在编码代理安全与AMD大规模算力落地：Simon Willison介绍外部沙箱模式，让代理在本地运行但代码在隔离沙箱执行，提升安全性；SemiAnalysis展示Trainium3 Neuron分析栈的精细程度可生成像素艺术；Dylan Patel评论TensorWave与OpenAI达成457MW AMD MI455X专用基础设施大单，首批2027年上线，标志AMD在前沿AI部署中的实质进展。",
     "2026-11-16": "今日无重要热点",
     "2026-11-15": "今日焦点集中在架构创新与自研芯片趋势：Sebastian Raschka分享Inkling 2 Small采用注意力残差（类似Kimi K3）但不含线性混合；SemiAnalysis指出Nvidia七大客户中六家正自研芯片，强调Jensen在供应链说服力的独特地位，TPU性能已可比肩；Simon Willison探讨Claude auto mode权限系统如何通过提示词解锁。",
@@ -12,6 +13,42 @@ window.DIGEST = {
     "2026-11-09": "今日焦点集中在芯片性能突破与政治风险：SemiAnalysis报道AMD MI355借助TileRT软件在长上下文推理上实现比GB300 NVL72快1.42倍的性能，达1330 p90 tok/s/user；同时Dylan Patel指出Jensen Huang或将面临民主党国会对向中国销售GPU的深入调查，增加政治不确定性。"
   },
   items: [
+    {
+      date: "2026-11-18",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "AI应用 & 工具",
+      title: "更大上下文对Agent响应影响有限（若已缓存）",
+      what: "SemiAnalysis分析其内部Claude Opus 5.5使用数据：更大上下文会让Agent稍慢，但若已缓存影响不大。p50首token时间从50-100K的0.9s升至600K+的1.6s。未缓存时差距更大（p50 3.5s vs 1.6s，p90达3.5倍）。仅1.8%请求高度未缓存，重处理占15%总花费，多来自新子代理或闲置超1小时后恢复（约$3）。数据来自10月6日至11月8日的632K请求。",
+      why: "揭示实际代理使用中上下文长度与缓存对延迟和成本的影响，帮助优化长会话。",
+      impact: "可能推动更好的缓存策略与会话管理，降低长上下文代理的实际成本与等待时间。",
+      time: "2026-11-18 08:46",
+      url: "https://x.com/SemiAnalysis_/status/2122853999506260021"
+    },
+    {
+      date: "2026-11-18",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "算力 & 硬件",
+      title: "Nebius YE2026业绩未达预期，资本开支延迟",
+      what: "SemiAnalysis评论Nebius YE2026结果并不意外，早在近一年前就预计New Jersey项目与ARR指引会落空。资本开支延迟，微软相关推至1H2027，未达指引。团队已向数据中心模型订阅者预警，并深度跟踪加密矿工等可能延迟。",
+      why: "验证对超大规模数据中心建设进度与指引激进性的早期判断。",
+      impact: "提醒投资者注意neocloud与数据中心项目的执行风险与时间表不确定性。",
+      time: "2026-11-18 03:55",
+      url: "https://x.com/SemiAnalysis_/status/2122780675619131434"
+    },
+    {
+      date: "2026-11-18",
+      author: "Ben Bajarin",
+      handle: "@BenBajarin",
+      topic: "大公司 & 商业模式",
+      title: "NVIDIA强调供应链承诺，增长计划已定",
+      what: "Ben Bajarin指出NVIDIA发布博客强调与供应链伙伴的承诺扩展，以支持AI基础设施建设。解读为继续增长的计划已成定局。",
+      why: "在领导层变动背景下，重申供应链稳定与扩张意愿。",
+      impact: "可能稳定市场对NVIDIA持续主导AI算力供应的信心。",
+      time: "2026-11-18 07:18",
+      url: "https://x.com/BenBajarin/status/2122831772752715950"
+    },
     {
       date: "2026-11-17",
       author: "Simon Willison",
@@ -102,7 +139,7 @@ window.DIGEST = {
       handle: "@SemiAnalysis_",
       topic: "算力 & 硬件",
       title: "SpaceX Colossus 2急速扩张：年内IT算力从0.4GW增至2.4GW",
-      what: "SemiAnalysis报道SpaceX在孟菲斯/密西西比边境校园从1月的0.4GW IT算力扩至2026年底的2.4GW，涵盖Macrohard、MiniHard、Macroharder、Project SPAM与Gun Range等多个项目。建设速度极快，MiniHard约5个月完成，Gun Range约4个月，远快于行业8-12个月标准。电力方面面临约300MW缺口，但通过近6GWh的大规模BESS（1377个Megapacks）与燃气轮机协调，结合低PUE可能覆盖缺口。",
+      what: "SemiAnalysis报道SpaceX在孟菲斯/密西西比边境校园从1月的0.4GW IT算力扩至2026年底的2.4GW，涵盖Macrohard、MiniHard、Macroharder、Project SPAM与Gun Range等多个项目。建设速度极快，MiniHard纤5个月完成，Gun Range纤4个月，远快于行业8-12个月标准。电力方面面临约300MW缺口，但通过近6GWh的大规模BESS（1377个Megapacks）与燃气轮机协调，结合低PUE可能覆盖缺口。",
       why: "展示极端快速的数据中心建设能力与创新电力解决方案，直接支撑AI算力需求爆发。",
       impact: "可能加速超大规模AI训练与推理基础设施部署，影响能源、芯片与整体算力布局竞争。",
       time: "2026-11-14 08:36",
