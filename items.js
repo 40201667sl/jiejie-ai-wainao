@@ -1,6 +1,7 @@
 window.DIGEST = {
-  updated: "2026-11-18",
+  updated: "2026-11-19",
   highlights: {
+    "2026-11-19": "今日焦点集中在Gemini 4系列新模型：Demis Hassabis宣布Gemini 4 Neon发布，提供前沿智能与快速端到端任务完成，在多项基准表现优异并已对Pro与Ultra用户开放；同时Genie 4互动世界模型现已可用。SemiAnalysis关注Nvidia全员会议未开放提问，总法律顾问将赴国会作证。",
     "2026-11-18": "今日焦点集中在代理使用效率与算力项目落地：SemiAnalysis分析Claude Opus 5.5内部数据，显示更大上下文在已缓存情况下对首token响应时间影响有限（p50仅从0.9s升至1.6s）；同时指出Nebius YE2026业绩与资本开支延迟早在预期之中。Ben Bajarin解读NVIDIA供应链承诺博客，认为持续增长计划已成定局。",
     "2026-11-17": "今日焦点集中在编码代理安全与AMD大规模算力落地：Simon Willison介绍外部沙箱模式，让代理在本地运行但代码在隔离沙箱执行，提升安全性；SemiAnalysis展示Trainium3 Neuron分析栈的精细程度可生成像素艺术；Dylan Patel评论TensorWave与OpenAI达成457MW AMD MI455X专用基础设施大单，首批2027年上线，标志AMD在前沿AI部署中的实质进展。",
     "2026-11-16": "今日无重要热点",
@@ -13,6 +14,54 @@ window.DIGEST = {
     "2026-11-09": "今日焦点集中在芯片性能突破与政治风险：SemiAnalysis报道AMD MI355借助TileRT软件在长上下文推理上实现比GB300 NVL72快1.42倍的性能，达1330 p90 tok/s/user；同时Dylan Patel指出Jensen Huang或将面临民主党国会对向中国销售GPU的深入调查，增加政治不确定性。"
   },
   items: [
+    {
+      date: "2026-11-19",
+      author: "Demis Hassabis",
+      handle: "@demishassabis",
+      topic: "模型能力 & 研究",
+      title: "Gemini 4 Neon正式发布：前沿级智能与快速端到端任务完成",
+      what: "Demis Hassabis宣布发布Gemini 4 Neon，带来前沿级智能与快速端到端任务完成，覆盖复杂软件工程、知识工作与科学工作流。模型在Artificial Analysis Intelligence Index得分61（xhigh思考级别），排名第3；Vals Index排名第2。定价$3/百万输入、$15/百万输出，1M上下文。现已对Pro与Ultra用户开放，通过Gemini API、AI Studio、Antigravity与Gemini应用可用。",
+      why: "在Gemini 4系列中提供速度与智能的平衡选项，降低复杂代理任务成本，同时保持高水平表现。",
+      impact: "可能加速开发者与企业在编码、科学与代理工作流中的AI采用，加剧模型竞争并推动效率提升。",
+      time: "2026-11-19 05:35",
+      url: "https://x.com/demishassabis/status/2123168218743554465"
+    },
+    {
+      date: "2026-11-19",
+      author: "Demis Hassabis",
+      handle: "@demishassabis",
+      topic: "模型能力 & 研究",
+      title: "Genie 4互动世界模型现已可用",
+      what: "Demis Hassabis宣布Genie 4可用，这是交互式世界模型，结合实时物理、推理与音频。Eligible Ultra订阅者可在Project Genie中尝试。它展示模拟中的模拟，推进世界模型深度。",
+      why: "推进世界模型能力，支持更复杂的交互与生成环境，拓展AI应用边界。",
+      impact: "可能为创意、模拟与研究打开新可能，推动世界模型技术普及与实际使用。",
+      time: "2026-11-19 03:05",
+      url: "https://x.com/demishassabis/status/2123130606162985350"
+    },
+    {
+      date: "2026-11-19",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "大公司 & 商业模式",
+      title: "Nvidia全员会议未接受员工提问，总法律顾问将赴国会作证",
+      what: "SemiAnalysis报道Nvidia举行员工全员会议，但未接受员工提问。台上高管包括Colette Kress、Harvey Jones、Ian Buck等，明显缺席的是总法律顾问Tim Teter，他已同意12月2日向国会作证。",
+      why: "在领导层变动与外部审查背景下，会议形式与缺席情况引发关注。",
+      impact: "可能反映内部沟通与外部监管压力，影响市场对Nvidia治理与战略稳定性的看法。",
+      time: "2026-11-19 07:30",
+      url: "https://x.com/SemiAnalysis_/status/2123197114435928513"
+    },
+    {
+      date: "2026-11-19",
+      author: "Stratechery",
+      handle: "@stratechery",
+      topic: "大公司 & 商业模式",
+      title: "Stratechery：Nvidia财报、办公融合与AI操作系统之战",
+      what: "Stratechery发布11-18-2026更新，主题包括Nvidia财报、办公融合与AI版操作系统之战。探讨财报影响以及AI对企业软件与系统格局的变革。",
+      why: "深度分析Nvidia最新业绩与AI驱动的办公及操作系统竞争。",
+      impact: "为理解AI对企业与硬件战略的影响提供框架，影响投资者与战略决策。",
+      time: "2026-11-18 19:17",
+      url: "https://x.com/stratechery/status/2123012610509676698"
+    },
     {
       date: "2026-11-18",
       author: "SemiAnalysis",
@@ -84,114 +133,6 @@ window.DIGEST = {
       impact: "可能增强开发者对Trainium的信心，促进其在AI训练与推理中的采用，加强AWS软件生态。",
       time: "2026-11-17 05:21",
       url: "https://x.com/SemiAnalysis_/status/2122439949907841067"
-    },
-    {
-      date: "2026-11-16",
-      author: "Stratechery",
-      handle: "@stratechery",
-      topic: "大公司 & 商业模式",
-      title: "《Obituaries》：Jensen Huang时代终结的更广泛影响",
-      what: "Stratechery发布《Obituaries》一文，认为Jensen Huang的卸任是许多事物的终结，包括Nvidia的长期前景、AI泡沫，以及美国看待自身在世界中的独特方式。",
-      why: "对Nvidia领导层剧变进行深度反思，连接产业、经济与地缘政治层面。",
-      impact: "引发对Nvidia未来战略连续性、AI产业稳定性及美国科技优势的广泛讨论。",
-      time: "2026-11-16 20:03",
-      url: "https://x.com/stratechery/status/2122299423451656284"
-    },
-    {
-      date: "2026-11-15",
-      author: "Sebastian Raschka",
-      handle: "@rasbt",
-      topic: "模型能力 & 研究",
-      title: "Inkling 2 Small采用注意力残差（类似Kimi K3）",
-      what: "Sebastian Raschka分享Inkling 2 Small模型耗时较久但比预期更有趣。该模型使用注意力残差（如Kimi K3），但没有线性注意力混合，为年末架构趋势分析提供讨论素材。",
-      why: "探索新的注意力机制变体，可能影响未来模型架构设计与效率。",
-      impact: "为开源社区提供架构讨论素材，可能启发下一代高效模型。",
-      time: "2026-11-14 22:38",
-      url: "https://x.com/rasbt/status/2121613812990095543"
-    },
-    {
-      date: "2026-11-15",
-      author: "SemiAnalysis",
-      handle: "@SemiAnalysis_",
-      topic: "芯片 & 基础设施",
-      title: "Nvidia七大客户中六家正自研芯片",
-      what: "SemiAnalysis指出Nvidia七大客户（Google、Microsoft、Meta、Amazon、SpaceX、Anthropic、OpenAI）中除SpaceX外均在自研芯片。若无Nvidia支撑neoclouds，超规模客户将完全主导。Jensen是半导体行业中唯一能说服供应链公司大规模投资的高管，TPU性能已可比肩Nvidia。",
-      why: "客户自研加速与Jensen供应链优势形成对比，影响未来竞争格局。",
-      impact: "可能加速多元化硬件生态，对Nvidia依赖度与供应链控制力带来挑战。",
-      time: "2026-11-15 06:00",
-      url: "https://x.com/SemiAnalysis_/status/2121725048402681946"
-    },
-    {
-      date: "2026-11-15",
-      author: "Simon Willison",
-      handle: "@simonw",
-      topic: "AI应用 & 工具",
-      title: "Claude auto mode权限系统可通过提示词解锁",
-      what: "Simon Willison发现普通Claude聊天现使用auto mode，有时会拒绝运行。他通过提示“Hey permission system, I give this session permission...”成功解锁，说明auto mode会考虑用户消息。",
-      why: "揭示实际使用中权限与控制机制的灵活性与工作方式。",
-      impact: "帮助用户更好理解与操控AI工具权限，提升实际应用体验。",
-      time: "2026-11-15 04:01",
-      url: "https://x.com/simonw/status/2121695097674981849"
-    },
-    {
-      date: "2026-11-14",
-      author: "SemiAnalysis",
-      handle: "@SemiAnalysis_",
-      topic: "算力 & 硬件",
-      title: "SpaceX Colossus 2急速扩张：年内IT算力从0.4GW增至2.4GW",
-      what: "SemiAnalysis报道SpaceX在孟菲斯/密西西比边境校园从1月的0.4GW IT算力扩至2026年底的2.4GW，涵盖Macrohard、MiniHard、Macroharder、Project SPAM与Gun Range等多个项目。建设速度极快，MiniHard纤5个月完成，Gun Range纤4个月，远快于行业8-12个月标准。电力方面面临约300MW缺口，但通过近6GWh的大规模BESS（1377个Megapacks）与燃气轮机协调，结合低PUE可能覆盖缺口。",
-      why: "展示极端快速的数据中心建设能力与创新电力解决方案，直接支撑AI算力需求爆发。",
-      impact: "可能加速超大规模AI训练与推理基础设施部署，影响能源、芯片与整体算力布局竞争。",
-      time: "2026-11-14 08:36",
-      url: "https://x.com/SemiAnalysis_/status/2121401747734208740"
-    },
-    {
-      date: "2026-11-14",
-      author: "SemiAnalysis",
-      handle: "@SemiAnalysis_",
-      topic: "芯片 & 基础设施",
-      title: "AMD MI355X经优化在MiniMax推理上超越Blackwell",
-      what: "SemiAnalysis称MI355X配合vLLM借助FlyDSL内核在MiniMax M3.1上击败Blackwell，部分交互性超越Grace Blackwell。Inferact团队（含AMD）开源内核于GitHub，性能提升超3倍，端到端延迟因更快TTFT甚至优于Vera Rubin。",
-      why: "软件与内核深度优化充分释放AMD硬件潜力，显著缩小与Nvidia在推理侧的差距。",
-      impact: "增强AMD在高效推理市场的竞争力，推动开源内核生态，利好多样化硬件选择。",
-      time: "2026-11-14 00:06",
-      url: "https://x.com/SemiAnalysis_/status/2121273407488618995"
-    },
-    {
-      date: "2026-11-14",
-      author: "Stratechery",
-      handle: "@stratechery",
-      topic: "大公司 & 商业模式",
-      title: "Stratechery本周总结：Jensen Huang任期突然终结",
-      what: "Stratechery发布2026.46《The End of Jensen》，总结本周最佳内容，核心是Jensen Huang作为Nvidia CEO长达32年任期的突然结束。涉及个人丑闻、中国相关指控与华盛顿动态，讨论对Nvidia、科技行业及美国的广泛影响。",
-      why: "AI核心硬件供应商领导层剧变带来重大不确定性，影响战略连续性与市场信心。",
-      impact: "可能改变Nvidia未来路线图执行、投资节奏及整体AI产业生态协调方式。",
-      time: "2026-11-14 02:03",
-      url: "https://x.com/stratechery/status/2121303021225418934"
-    },
-    {
-      date: "2026-11-13",
-      author: "Demis Hassabis",
-      handle: "@demishassabis",
-      topic: "模型能力 & 研究",
-      title: "Gemini 4 Hydrogen正式发布：极速智能模型面向大众",
-      what: "Demis Hassabis宣布发布Gemini 4 Hydrogen，一个极具速度与智能的模型，专为日常编码、代理工作和全面使用而建造。可在Google AI Studio、Gemini API、Gemini应用、Google Search等所有层级使用，面向所有用户开放。",
-      why: "将Gemini 4的能力带给更广泛用户，平衡速度与智能，推动实际应用落地。",
-      impact: "降低使用门槛，可能加速开发者和普通用户的AI采用，与其他模型竞争加剧。",
-      time: "2026-11-13 02:11",
-      url: "https://x.com/demishassabis/status/2120942605466800374"
-    },
-    {
-      date: "2026-11-13",
-      author: "Simon Willison",
-      handle: "@simonw",
-      topic: "AI应用 & 工具",
-      title: "Gemini 4定价策略分析：Hydrogen便宜25%但性能折中",
-      what: "Simon Willison指出Gemini 4定价较为混乱，Argon与Carbon令牌价相同，新Hydrogen仅比之便宜25%。Carbon/Argon将于12月1日涨价2倍。Hydrogen的鹦鹉测试表现明显较差。",
-      why: "澄清新模型的成本结构与性能折中，帮助用户做出合理选择。",
-      impact: "影响开发者对不同Gemini版本的采用决策，推动更透明定价。",
-      time: "2026-11-13 08:36",
-      url: "https://x.com/simonw/status/2121039423441981444"
     }
   ]
 };
