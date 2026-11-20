@@ -1,6 +1,7 @@
 window.DIGEST = {
-  updated: "2026-11-19",
+  updated: "2026-11-20",
   highlights: {
+    "2026-11-20": "今日焦点集中在物理AI演示与开源架构透明：Jim Fan发布GR00T 2真实灵巧手端到端自主控制视频；Sebastian Raschka深度点评Marin Mochi 535B检查点发布，揭示Latent MoE、XSA等架构选择。Simon Willison展示Gemini 4 Neon生成复杂Three.js动画的能力；SemiAnalysis以meme对比GB300机架内存与PS5供应，凸显AI算力对消费硬件的影响。Stratechery访谈探讨代理商务趋势。",
     "2026-11-19": "今日焦点集中在Gemini 4系列新模型：Demis Hassabis宣布Gemini 4 Neon发布，提供前沿智能与快速端到端任务完成，在多项基准表现优异并已对Pro与Ultra用户开放；同时Genie 4互动世界模型现已可用。SemiAnalysis关注Nvidia全员会议未开放提问，总法律顾问将赴国会作证。",
     "2026-11-18": "今日焦点集中在代理使用效率与算力项目落地：SemiAnalysis分析Claude Opus 5.5内部数据，显示更大上下文在已缓存情况下对首token响应时间影响有限（p50仅从0.9s升至1.6s）；同时指出Nebius YE2026业绩与资本开支延迟早在预期之中。Ben Bajarin解读NVIDIA供应链承诺博客，认为持续增长计划已成定局。",
     "2026-11-17": "今日焦点集中在编码代理安全与AMD大规模算力落地：Simon Willison介绍外部沙箱模式，让代理在本地运行但代码在隔离沙箱执行，提升安全性；SemiAnalysis展示Trainium3 Neuron分析栈的精细程度可生成像素艺术；Dylan Patel评论TensorWave与OpenAI达成457MW AMD MI455X专用基础设施大单，首批2027年上线，标志AMD在前沿AI部署中的实质进展。",
@@ -14,6 +15,66 @@ window.DIGEST = {
     "2026-11-09": "今日焦点集中在芯片性能突破与政治风险：SemiAnalysis报道AMD MI355借助TileRT软件在长上下文推理上实现比GB300 NVL72快1.42倍的性能，达1330 p90 tok/s/user；同时Dylan Patel指出Jensen Huang或将面临民主党国会对向中国销售GPU的深入调查，增加政治不确定性。"
   },
   items: [
+    {
+      date: "2026-11-19",
+      author: "Jim Fan",
+      handle: "@DrJimFan",
+      topic: "模型能力 & 研究",
+      title: "GR00T 2真实灵巧手端到端自主控制演示",
+      what: "Jim Fan发布视频展示GR00T 2控制真实灵巧手的端到端自主操作，1倍速无剪辑。视频呈现模型在实际机器人上的长时程灵巧任务执行能力。",
+      why: "验证开源世界动作模型在真实物理环境中的端到端部署效果，推动物理AGI进展。",
+      impact: "可能加速开源机器人模型的实际实验与部署，降低开发者进入门槛，促进社区创新。",
+      time: "2026-11-20 01:36",
+      url: "https://x.com/DrJimFan/status/2123470587259732200"
+    },
+    {
+      date: "2026-11-19",
+      author: "Sebastian Raschka",
+      handle: "@rasbt",
+      topic: "模型能力 & 研究",
+      title: "Marin Mochi 535B检查点全量发布与架构设计洞察",
+      what: "Sebastian Raschka点评Marin Mochi 535B-A23B全部57个中间检查点发布（含长上下文扩展10个），技术报告详述Latent MoE加额外RMSNorm、经典3:1滑动窗口/全局门控GQA、局部RoPE与全局NoPE、键与输出短卷积以及独家自注意力（XSA）等选择，以提升训练稳定性与GPU吞吐。",
+      why: "提供大规模开源预训练的透明过程与组件实验细节，帮助社区理解有效架构决策。",
+      impact: "促进开源大模型研究、复现与进一步创新，可能影响年底架构趋势总结。",
+      time: "2026-11-19 23:10",
+      url: "https://x.com/rasbt/status/2123433827234111659"
+    },
+    {
+      date: "2026-11-19",
+      author: "Simon Willison",
+      handle: "@simonw",
+      topic: "AI应用 & 工具",
+      title: "Gemini 4 Neon生成复杂Three.js交互动画",
+      what: "Simon Willison使用Gemini 4 Neon根据提示生成Yonkers变身巨型机甲并在曼哈顿、皇后区与布鲁克林踩踏的Three.js动画，整合OpenStreetMap数据，并在博客分享更多笔记。",
+      why: "展示新模型在复杂代码生成、交互式可视化与地图数据结合上的实际能力。",
+      impact: "鼓励开发者探索AI辅助创意工具与原型开发，提升前端与可视化工作效率。",
+      time: "2026-11-19 14:42",
+      url: "https://x.com/simonw/status/2123305792854217049"
+    },
+    {
+      date: "2026-11-19",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "算力 & 硬件",
+      title: "GB300机架内存相当于逾2000台PS5 Pro，挤压游戏硬件供应",
+      what: "SemiAnalysis发布meme指出PS5 Pro因GTA 6全球大面积缺货。一个GB300 NVL72机架约有38TB内存，相当于超过2000台PS5 Pro的GDDR6内存用量，意味着AI算力建设占用了本可用于游戏硬件的DRAM产能。",
+      why: "用直观对比凸显AI基础设施对高端内存产能的巨大需求与机会成本。",
+      impact: "提醒市场关注AI算力扩张对消费电子与游戏供应链的挤压效应，可能影响相关硬件定价与供应。",
+      time: "2026-11-20 03:13",
+      url: "https://x.com/SemiAnalysis_/status/2123495013938073687"
+    },
+    {
+      date: "2026-11-19",
+      author: "Stratechery",
+      handle: "@stratechery",
+      topic: "大公司 & 商业模式",
+      title: "与Eric Seufert访谈：代理商务（Agentic Commerce）的兴起",
+      what: "Stratechery发布与Eric Seufert关于代理商务的访谈，探讨AI代理如何重塑电商、交易与商业模式格局。",
+      why: "深度分析AI代理对在线商务与广告生态系统的潜在颠覆与机遇。",
+      impact: "为企业与投资者提供理解AI驱动新商业形态的战略框架，影响未来规划与投资决策。",
+      time: "2026-11-19 19:00",
+      url: "https://x.com/stratechery/status/2123370719551582636"
+    },
     {
       date: "2026-11-19",
       author: "Demis Hassabis",
