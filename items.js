@@ -1,6 +1,7 @@
 window.DIGEST = {
-  updated: "2026-11-24",
+  updated: "2026-11-25",
   highlights: {
+    "2026-11-25": "今日焦点集中在LLM能力拐点回顾与新型AI硬件：Simon Willison总结过去十二个月三大拐点（可靠编码代理、Fable类模型、3D游戏生成）；SemiAnalysis采访Naveen Rao谈振荡器芯片追求焦耳每token效率，并报道AMD Venice在SPEC上对标NVIDIA Vera表现强劲，挑战其agentic叙事。Stratechery探讨AI时代个人例外治理。",
     "2026-11-24": "今日焦点集中在以太网多机架规模扩展与新模型架构：SemiAnalysis独家揭示AMD MI550x通过集中式光学交换机行实现单跳以太网多机架（>500-1k GPU）规模扩展，机架内仍保持铜背板，直接挑战NVLink单跳垄断与高毛利；Simon Willison测试Z.ai的GLM-5.4（首个循环Transformer架构），并指出从5.2到5.3风格显著变化更接近主流模型。",
     "2026-11-23": "今日焦点集中在推理硬件性能与营销差距：SemiAnalysis详细质疑Cerebras对Kimi K3.1 2.8T模型2000 tok/s交互性声称仅限短上下文，并指出长上下文与p99 TPOT及功耗数据不足；同时报道SGLang Rubin NVL72提交相对GB300实现6.5倍每美元性能优势。",
     "2026-11-22": "今日焦点集中在Gemini 4模型思考级别优化：Simon Willison详细对比Gemini 4 Hydrogen在high与xhigh思考努力上的显著差距（成本与token用量相差数倍），并分享Carbon、Neon、Hydrogen全系列推理级别对比网格。",
@@ -8,6 +9,54 @@ window.DIGEST = {
     "2026-11-20": "今日焦点集中在物理AI演示与开源架构透明：Jim Fan发布GR00T 2真实灵巧手端到端自主控制视频；Sebastian Raschka深度点评Marin Mochi 535B检查点发布，揭示Latent MoE、XSA等架构选择。Simon Willison展示Gemini 4 Neon生成复杂Three.js动画的能力；SemiAnalysis以meme对比GB300机架内存与PS5供应，凸显AI算力对消费硬件的影响。Stratechery访谈探讨代理商务趋势。"
   },
   items: [
+    {
+      date: "2026-11-25",
+      author: "Simon Willison",
+      handle: "@simonw",
+      topic: "模型能力 & 研究",
+      title: "过去十二个月LLM三大拐点：从可靠编码代理到3D游戏生成",
+      what: "Simon Willison发布博文，总结过去一年LLM与编码代理的三大拐点：2025年11月Claude Opus 4.5与GPT-5.1使编码代理成为可靠日常工具；Fable类模型可对定义清晰的目标近乎蛮力求解；近月前沿模型在3D建模与游戏开发上显著进步。强调软件开发可能已根本改变。",
+      why: "回顾能力跃迁节点，帮助理解当前模型已能从清晰描述构建复杂软件与游戏。",
+      impact: "可能加速开发者全面转向AI辅助开发，推动编码代理与生成式应用普及。",
+      time: "2026-11-24 23:21",
+      url: "https://x.com/simonw/status/2125369126877286662"
+    },
+    {
+      date: "2026-11-25",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "芯片 & 基础设施",
+      title: "SemiAnalysis Tape Out系列首集：Naveen Rao谈振荡器芯片与焦耳每token",
+      what: "SemiAnalysis推出Tape Out系列，采访Unconventional AI创始人Naveen Rao（曾卖Nervana给Intel、MosaicML给Databricks）。他主张AI受能源限制，关键指标是焦耳每token，需放弃冯·诺依曼架构，构建“由权重编程”的机器。每三个月流片一次，首个耦合振荡器测试芯片生成小图约900纳焦，GPU约50毫焦。",
+      why: "探索超越传统数字芯片的能量效率路径，应对AI功耗瓶颈。",
+      impact: "若成功，可能大幅降低推理能耗，挑战GPU主导，推动新型AI硬件范式。",
+      time: "2026-11-24 23:30",
+      url: "https://x.com/SemiAnalysis_/status/2125371388743565562"
+    },
+    {
+      date: "2026-11-25",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "芯片 & 基础设施",
+      title: "AMD Venice CPU在SPEC CPU 2026上对标NVIDIA Vera表现优异",
+      what: "SemiAnalysis指出官方SPEC结果出炉后，AMD Venice（尤其Venice-HF）在每线程性能上与NVIDIA Vera竞争激烈。256核EPYC 9996功耗每核心不到一半仍接近，Venice-HF因更高主频快26-38%，扣除stockfish后仍快21-33%；在agentic与EDA任务上仍快11-21%。",
+      why: "挑战NVIDIA对Vera高每线程性能适合agentic工具调用的营销叙事。",
+      impact: "可能影响数据中心CPU采购选择，强化AMD在服务器CPU市场的竞争力。",
+      time: "2026-11-24 20:54",
+      url: "https://x.com/SemiAnalysis_/status/2125332209821200682"
+    },
+    {
+      date: "2026-11-25",
+      author: "Stratechery",
+      handle: "@stratechery",
+      topic: "大公司 & 商业模式",
+      title: "The Individual Exception：黄仁勋获管理豁免，AI时代或成常态",
+      what: "Stratechery文章探讨Jensen Huang被授予免于管理监督的例外；在AI时代，他不会是最后一个。",
+      why: "分析顶尖技术领袖在快速创新环境下的特殊地位与治理模式。",
+      impact: "可能影响科技公司组织设计与创始人/CEO权力结构。",
+      time: "2026-11-24 11:00",
+      url: "https://x.com/stratechery/status/2125182652248383829"
+    },
     {
       date: "2026-11-24",
       author: "SemiAnalysis",
