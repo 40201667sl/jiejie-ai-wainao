@@ -1,6 +1,7 @@
 window.DIGEST = {
-  updated: "2026-11-25",
+  updated: "2026-11-26",
   highlights: {
+    "2026-11-26": "今日焦点集中在模型基准与编码代理实践：SemiAnalysis更新GDPx排行榜，GPT-6.2 Astra以19.3%登顶领先Fable 5.2，但软件工程表现较弱而科学对齐强势；Simon Willison分享两周内借助Fable 5.2完成194个开源提交，凸显编码代理真实生产力。Ben Bajarin演示AI快速生成自定义视觉的实用案例。",
     "2026-11-25": "今日焦点集中在LLM能力拐点回顾与新型AI硬件：Simon Willison总结过去十二个月三大拐点（可靠编码代理、Fable类模型、3D游戏生成）；SemiAnalysis采访Naveen Rao谈振荡器芯片追求焦耳每token效率，并报道AMD Venice在SPEC上对标NVIDIA Vera表现强劲，挑战其agentic叙事。Stratechery探讨AI时代个人例外治理。",
     "2026-11-24": "今日焦点集中在以太网多机架规模扩展与新模型架构：SemiAnalysis独家揭示AMD MI550x通过集中式光学交换机行实现单跳以太网多机架（>500-1k GPU）规模扩展，机架内仍保持铜背板，直接挑战NVLink单跳垄断与高毛利；Simon Willison测试Z.ai的GLM-5.4（首个循环Transformer架构），并指出从5.2到5.3风格显著变化更接近主流模型。",
     "2026-11-23": "今日焦点集中在推理硬件性能与营销差距：SemiAnalysis详细质疑Cerebras对Kimi K3.1 2.8T模型2000 tok/s交互性声称仅限短上下文，并指出长上下文与p99 TPOT及功耗数据不足；同时报道SGLang Rubin NVL72提交相对GB300实现6.5倍每美元性能优势。",
@@ -9,6 +10,42 @@ window.DIGEST = {
     "2026-11-20": "今日焦点集中在物理AI演示与开源架构透明：Jim Fan发布GR00T 2真实灵巧手端到端自主控制视频；Sebastian Raschka深度点评Marin Mochi 535B检查点发布，揭示Latent MoE、XSA等架构选择。Simon Willison展示Gemini 4 Neon生成复杂Three.js动画的能力；SemiAnalysis以meme对比GB300机架内存与PS5供应，凸显AI算力对消费硬件的影响。Stratechery访谈探讨代理商务趋势。"
   },
   items: [
+    {
+      date: "2026-11-26",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "模型能力 & 研究",
+      title: "GPT-6.2 Astra登顶SemiAnalysis GDPx排行榜",
+      what: "SemiAnalysis发布GDPx排行榜更新，GPT-6.2 Astra以19.3%得分登顶，领先Claude Fable 5.2的16.4%；Gemini 4 Neon排第六10.1%。增益集中在科学领域如材料科学和RSI，对齐得分37.6%远超前最佳。但在软件工程上Astra仅13.3%低于Fable 5.2的24.4%。OpenAI占据成本性能前沿。",
+      why: "揭示不同模型在专业领域与通用软件工程上的能力差异，解释社区对某些模型的反应。",
+      impact: "可能影响开发者和企业选择模型时的优先考量，强调领域特定性能而非单一基准。",
+      time: "2026-11-26 00:09",
+      url: "https://x.com/SemiAnalysis_/status/2125743598587003170"
+    },
+    {
+      date: "2026-11-26",
+      author: "Simon Willison",
+      handle: "@simonw",
+      topic: "AI应用 & 工具",
+      title: "两周内Fable 5.2协助完成194个开源提交",
+      what: "Simon Willison回应Claude官方帖，表示Claude Fable 5.2发布仅两周，他已在开源项目中完成194个由Fable 5.2共同作者的提交。",
+      why: "展示前沿编码代理在实际开源开发中的高生产力应用。",
+      impact: "进一步证明AI编码助手已能显著加速软件开发周期，推动更多开发者采用。",
+      time: "2026-11-25 17:19",
+      url: "https://x.com/simonw/status/2125640464863056148"
+    },
+    {
+      date: "2026-11-26",
+      author: "Ben Bajarin",
+      handle: "@BenBajarin",
+      topic: "AI应用 & 工具",
+      title: "用AI快速生成自定义吉他视觉",
+      what: "Ben Bajarin分享使用AI创建自定义视觉图像的用例，比搜索现有图片更快且完全符合需求，并标记了几位吉他相关朋友。",
+      why: "展示AI在创意可视化生成上的实用性和效率优势。",
+      impact: "鼓励更多非设计专业人士使用生成式AI进行个性化内容创作。",
+      time: "2026-11-26 00:55",
+      url: "https://x.com/BenBajarin/status/2125755319565635742"
+    },
     {
       date: "2026-11-25",
       author: "Simon Willison",
