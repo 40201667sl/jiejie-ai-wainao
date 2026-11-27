@@ -1,6 +1,7 @@
 window.DIGEST = {
-  updated: "2026-11-26",
+  updated: "2026-11-27",
   highlights: {
+    "2026-11-27": "今日焦点集中在推理硬件性价比与AI应用副作用：SemiAnalysis披露亚马逊Trainium3 UltraServer在AgentX基准上相对NVIDIA GB300 NVL72实现2.28倍每美元性能，优势主要源于更低的芯片拥有成本。Simon Willison吐槽大量AI代理生成的求职邮件令人沮丧，凸显编码代理滥用带来的信任危机。",
     "2026-11-26": "今日焦点集中在模型基准与编码代理实践：SemiAnalysis更新GDPx排行榜，GPT-6.2 Astra以19.3%登顶领先Fable 5.2，但软件工程表现较弱而科学对齐强势；Simon Willison分享两周内借助Fable 5.2完成194个开源提交，凸显编码代理真实生产力。Ben Bajarin演示AI快速生成自定义视觉的实用案例。",
     "2026-11-25": "今日焦点集中在LLM能力拐点回顾与新型AI硬件：Simon Willison总结过去十二个月三大拐点（可靠编码代理、Fable类模型、3D游戏生成）；SemiAnalysis采访Naveen Rao谈振荡器芯片追求焦耳每token效率，并报道AMD Venice在SPEC上对标NVIDIA Vera表现强劲，挑战其agentic叙事。Stratechery探讨AI时代个人例外治理。",
     "2026-11-24": "今日焦点集中在以太网多机架规模扩展与新模型架构：SemiAnalysis独家揭示AMD MI550x通过集中式光学交换机行实现单跳以太网多机架（>500-1k GPU）规模扩展，机架内仍保持铜背板，直接挑战NVLink单跳垄断与高毛利；Simon Willison测试Z.ai的GLM-5.4（首个循环Transformer架构），并指出从5.2到5.3风格显著变化更接近主流模型。",
@@ -10,6 +11,30 @@ window.DIGEST = {
     "2026-11-20": "今日焦点集中在物理AI演示与开源架构透明：Jim Fan发布GR00T 2真实灵巧手端到端自主控制视频；Sebastian Raschka深度点评Marin Mochi 535B检查点发布，揭示Latent MoE、XSA等架构选择。Simon Willison展示Gemini 4 Neon生成复杂Three.js动画的能力；SemiAnalysis以meme对比GB300机架内存与PS5供应，凸显AI算力对消费硬件的影响。Stratechery访谈探讨代理商务趋势。"
   },
   items: [
+    {
+      date: "2026-11-27",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "芯片 & 基础设施",
+      title: "亚马逊Trainium3在AgentX基准上实现2.28倍每美元性能优势",
+      what: "SemiAnalysis报告亚马逊Trainium3 UltraServer首次提交至Agentic Inference Benchmark（AgentX），相对NVIDIA GB300 NVL72实现2.28倍更好的每美元性能。测试覆盖GLM-5.3等模型的agentic工作负载，优势主要来自更低的芯片小时拥有成本（约1.05美元 vs GB300的2.31美元），每芯片吞吐量仅略高约4%。并期待即将测试Trainium4。",
+      why: "揭示超大规模云厂商自研ASIC在推理经济性上的竞争力，尤其针对多轮长上下文agentic场景。",
+      impact: "可能推动更多企业采用AWS Trainium方案降低推理成本，挑战NVIDIA在高性能推理市场的溢价能力，加速自研硅与GPU的成本竞争。",
+      time: "2026-11-27 04:50",
+      url: "https://x.com/SemiAnalysis_/status/2126055957838848156"
+    },
+    {
+      date: "2026-11-27",
+      author: "Simon Willison",
+      handle: "@simonw",
+      topic: "AI应用 & 工具",
+      title: "AI代理生成的求职邮件泛滥令人沮丧",
+      what: "Simon Willison回应关于Cloudflare求职邮件的讨论，指出大量以“你的某篇博文引起我注意”开头的邮件几乎100%由AI代理撰写，感觉像被主动镜像欺骗以操纵，非常令人沮丧。",
+      why: "展示LLM与编码代理被广泛用于批量生成个性化内容，导致职业沟通中的信任问题。",
+      impact: "可能促使招聘平台和公司加强AI生成内容检测与过滤，影响AI工具在求职和营销场景的接受度。",
+      time: "2026-11-27 01:03",
+      url: "https://x.com/simonw/status/2125998873252605954"
+    },
     {
       date: "2026-11-26",
       author: "SemiAnalysis",
