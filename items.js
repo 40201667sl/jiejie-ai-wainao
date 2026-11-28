@@ -1,6 +1,7 @@
 window.DIGEST = {
-  updated: "2026-11-27",
+  updated: "2026-11-28",
   highlights: {
+    "2026-11-28": "今日焦点集中在推理硬件性价比与基准真实性：SemiAnalysis指出Google TPU与Amazon Trainium在InferenceX基准上相对NVIDIA实现1.5-2.5倍每美元性能优势；同时Kimi K3.1在公开Terminal-Bench领先但在私有GDPx大幅落后，凸显公开基准易过拟合风险。Karpathy称赞国家级数字孪生项目体现AI构建真实世界动态模型潜力；Ben Bajarin基于企业研究认为AI采用扩散慢于预期。",
     "2026-11-27": "今日焦点集中在推理硬件性价比与AI应用副作用：SemiAnalysis披露亚马逊Trainium3 UltraServer在AgentX基准上相对NVIDIA GB300 NVL72实现2.28倍每美元性能，优势主要源于更低的芯片拥有成本。Simon Willison吐槽大量AI代理生成的求职邮件令人沮丧，凸显编码代理滥用带来的信任危机。",
     "2026-11-26": "今日焦点集中在模型基准与编码代理实践：SemiAnalysis更新GDPx排行榜，GPT-6.2 Astra以19.3%登顶领先Fable 5.2，但软件工程表现较弱而科学对齐强势；Simon Willison分享两周内借助Fable 5.2完成194个开源提交，凸显编码代理真实生产力。Ben Bajarin演示AI快速生成自定义视觉的实用案例。",
     "2026-11-25": "今日焦点集中在LLM能力拐点回顾与新型AI硬件：Simon Willison总结过去十二个月三大拐点（可靠编码代理、Fable类模型、3D游戏生成）；SemiAnalysis采访Naveen Rao谈振荡器芯片追求焦耳每token效率，并报道AMD Venice在SPEC上对标NVIDIA Vera表现强劲，挑战其agentic叙事。Stratechery探讨AI时代个人例外治理。",
@@ -11,6 +12,54 @@ window.DIGEST = {
     "2026-11-20": "今日焦点集中在物理AI演示与开源架构透明：Jim Fan发布GR00T 2真实灵巧手端到端自主控制视频；Sebastian Raschka深度点评Marin Mochi 535B检查点发布，揭示Latent MoE、XSA等架构选择。Simon Willison展示Gemini 4 Neon生成复杂Three.js动画的能力；SemiAnalysis以meme对比GB300机架内存与PS5供应，凸显AI算力对消费硬件的影响。Stratechery访谈探讨代理商务趋势。"
   },
   items: [
+    {
+      date: "2026-11-28",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "模型能力 & 研究",
+      title: "Kimi K3.1在Terminal-Bench领先但私有基准落后",
+      what: "SemiAnalysis报告Moonshot Kimi K3.1在Terminal-Bench 4.1上以68.2%排名169中第1，但在其私有GDPx基准上仅6.3%排名26中第16，落后于Qwen 4 Max。指出公开基准易被针对优化，私有专家任务更难作弊。",
+      why: "揭示模型基准的局限性，公开排行榜可能被sloptimize，真实能力需更严格私有评估。",
+      impact: "可能促使行业更重视私有与专家级基准，减少对单一公开榜单的过度依赖，影响模型评估与采购决策。",
+      time: "2026-11-28 09:30",
+      url: "https://x.com/SemiAnalysis_/status/2126488849090060483"
+    },
+    {
+      date: "2026-11-28",
+      author: "SemiAnalysis",
+      handle: "@SemiAnalysis_",
+      topic: "芯片 & 基础设施",
+      title: "TPU与Trainium在InferenceX上展现1.5-2.5倍性价比优势",
+      what: "SemiAnalysis指出，尽管Jensen曾暗示TPU与Trainium不会参与行业标准InferenceX基准，本周两者均提交结果，Google与Amazon展示相对等效NVIDIA GPU在发布时1.5–2.5倍更好的每美元性能。附详细微架构分析。",
+      why: "反驳NVIDIA对自研ASIC性价比的质疑，展示云厂商自研芯片在推理经济性上的竞争力。",
+      impact: "可能加速企业向TPU/Trainium迁移以降低推理成本，进一步挑战NVIDIA在推理市场的定价权。",
+      time: "2026-11-28 06:31",
+      url: "https://x.com/SemiAnalysis_/status/2126443877871517788"
+    },
+    {
+      date: "2026-11-28",
+      author: "Andrej Karpathy",
+      handle: "@karpathy",
+      topic: "AI应用 & 工具",
+      title: "数字孪生理念：从工厂到整个国家的动态虚拟模型",
+      what: "Karpathy称赞基于其US Civ项目灵感构建的印度国家级3D策略游戏BHARAT，强调自己痴迷于“数字孪生”概念——物理对象或系统的动态虚拟模型，此处扩展至整个国家，整合真实公共数据。",
+      why: "展示AI编码代理如何将海量真实数据转化为可交互的国家级数字模型。",
+      impact: "可能启发更多国家或城市构建数字孪生应用，推动AI在城市规划、模拟与教育中的应用。",
+      time: "2026-11-28 00:06",
+      url: "https://x.com/karpathy/status/2126347015198302437"
+    },
+    {
+      date: "2026-11-28",
+      author: "Ben Bajarin",
+      handle: "@BenBajarin",
+      topic: "大公司 & 商业模式",
+      title: "企业AI采用速度低于预期，对高ARR预测持谨慎",
+      what: "Ben Bajarin对Leopold关于Anthropic 2027年底ARR超6400亿美元、OpenAI+Anthropic合计超1万亿美元的预测表示看好业务但押注“低于预期”。基于企业决策者研究，当前论点是AI扩散速度将慢于市场预期。",
+      why: "从企业采用实际反馈出发，质疑过于乐观的收入预测。",
+      impact: "可能促使投资者与分析师更审慎评估AI公司短期商业化速度，关注实际企业落地障碍。",
+      time: "2026-11-28 09:16",
+      url: "https://x.com/BenBajarin/status/2126485388495847640"
+    },
     {
       date: "2026-11-27",
       author: "SemiAnalysis",
@@ -89,7 +138,7 @@ window.DIGEST = {
       handle: "@SemiAnalysis_",
       topic: "芯片 & 基础设施",
       title: "SemiAnalysis Tape Out系列首集：Naveen Rao谈振荡器芯片与焦耳每token",
-      what: "SemiAnalysis推出Tape Out系列，采访Unconventional AI创始人Naveen Rao（曾卖Nervana给Intel、MosaicML给Databricks）。他主张AI受能源限制，关键指标是焦耳每token，需放弃冯·诺依曼架构，构建“由权重编程”的机器。每三个月流片一次，首个耦合振荡器测试芯片生成小图约900纳焦，GPU约50毫焦。",
+      what: "SemiAnalysis推出Tape Out系列，采访Unconventional AI创始人Naveen Rao（曾卖Nervana给Intel、MosaicML给Databricks）。他主张AI受能源限制，关键指标是焦耳每token，需放弃冯·诺依曼架构，构建“由权重编程”的机器。每三个月流片一次，首个耦合振荡器测试芯片生成小图纠900纳焦，GPU纠50毫焦。",
       why: "探索超越传统数字芯片的能量效率路径，应对AI功耗瓶颈。",
       impact: "若成功，可能大幅降低推理能耗，挑战GPU主导，推动新型AI硬件范式。",
       time: "2026-11-24 23:30",
